@@ -1,21 +1,16 @@
-import { auth } from "service";
-import { useEffect } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import routes from "routes";
 
 const App = () => {
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await auth.login({
-        email: "maidersonn@gmail.com",
-        password: "maider",
-      });
-      console.log(result);
-    };
-    fetchData();
-  }, []);
-
   return (
     <div>
       <header>Nomadas Digitales. </header>
+      <Switch>
+        {routes.map((route, index) => (
+          <Route {...route} key={index} />
+        ))}
+        <Redirect to="/home" />
+      </Switch>
     </div>
   );
 };
