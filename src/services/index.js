@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import { login, register } from "./auth";
+import { getByFilters } from "./houses";
 
 const client = axios.create({
   baseURL: process.env.REACT_APP_BACK_URL,
@@ -14,4 +15,8 @@ const auth = {
   register: register(client),
 };
 
-export { auth };
+const houses = {
+  getByFilters: getByFilters(client),
+};
+
+export { auth, houses };
