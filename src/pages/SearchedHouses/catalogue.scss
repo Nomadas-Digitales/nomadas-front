@@ -1,0 +1,66 @@
+@import "../../style/base";
+
+.header {
+  background-color: grayscale($color: #d6cece);
+  height: 12rem;
+  margin: 0;
+  padding: 0;
+}
+
+.searchInput {
+  background-color: transparent;
+  border: transparent;
+  height: 2rem;
+  padding-left: 1rem;
+}
+
+img {
+  padding-left: 0.5rem;
+}
+
+.searchContainer {
+  background-color: grey;
+  border-radius: 3rem;
+  width: 18rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+.goBack {
+  width: 1rem;
+  padding-right: 0.5rem;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.housesButton {
+  background-color: grey;
+  border-radius: 3rem;
+  width: 7rem;
+  height: 2rem;
+}
+.roomsButton {
+  @include buttonStyle($width: 7rem);
+}
+
+.rooms {
+  text-decoration: none;
+}
+.houseRoomContainer {
+  .houses {
+    text-decoration: none;
+  }
+  .rooms {
+    text-decoration: none;
+  }
+}
