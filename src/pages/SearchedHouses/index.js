@@ -37,17 +37,17 @@ const SearchedHouse = () => {
         <h1 className="title">VALENCIA</h1>
         <section className="houseRoomContainer">
           <button className="housesButton">
-            <Link className="houses">Viviendas</Link>
+            <Link className="link">Viviendas</Link>
           </button>
           <button className="roomsButton">
-            <Link classname="rooms">Habitaciones</Link>
+            <Link classname="link">Habitaciones</Link>
           </button>
         </section>
       </section>
       <section className="filterContainer">
-        <button>Filters</button>
-        <button>Map</button>
-        <button>Order</button>
+        <Link className="link">Filters</Link>
+        <Link className="link">Map</Link>
+        <Link className="link">Order</Link>
       </section>
       <section className="catalogueContainer"></section>
     </section>

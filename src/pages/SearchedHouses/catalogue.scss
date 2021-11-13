@@ -16,10 +16,8 @@ img {
 }
 
 .searchContainer {
-  background-color: grey;
-  border-radius: 3rem;
+  @extend %buttonStyle;
   width: 18rem;
-  height: 2rem;
   margin-right: 2rem;
 }
 .goBack {
@@ -39,25 +37,23 @@ img {
   text-align: center;
   margin: 1rem;
 }
+.link {
+  @extend %link;
+}
 
 .housesButton {
-  background-color: grey;
-  border-radius: 3rem;
+  @extend %buttonStyle;
   width: 7rem;
-  height: 2rem;
+  border: transparent;
 }
 .roomsButton {
-  @include buttonStyle($width: 7rem);
+  @extend %buttonStyle;
+  width: 7rem;
+  border: transparent;
 }
 
-.rooms {
-  text-decoration: none;
-}
 .houseRoomContainer {
-  .houses {
-    text-decoration: none;
-  }
-  .rooms {
-    text-decoration: none;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
