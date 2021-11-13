@@ -1,0 +1,13 @@
+@mixin buttonStyle($width: 18rem) {
+  background-color: grey;
+  border-radius: 3rem;
+  width: $width;
+  height: 2rem;
+}
+
+@mixin header($high: 12rem) {
+  background-color: grayscale($color: #d6cece);
+  height: $high;
+  margin: 0;
+  padding: 0;
+}
