@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useFetchFilteredHouses from "hooks/useFetchFilteredHouses";
+import {useFetchFilteredHouses} from "hooks/useFetchFilteredHouses";
 
 const SearchedHouse = () => {
   const [filters, setFilters] = useState({

@@ -1,4 +1,4 @@
-export const getByFilters = ({ get }) => async (
+const getByFilters = ({ get }) => async (
   distance,
   priceMin,
   priceMax,
@@ -16,3 +16,21 @@ export const getByFilters = ({ get }) => async (
     return false;
   }
 };
+
+const getAllHouses = ({ get }) => async (id) => {
+  try {
+    return (
+      await get(
+        `/house/list?id=${id}`
+      )
+    ).data;
+  } catch (error) {
+    console.info("Cannot get products");
+    return false;
+  }
+};
+
+export{
+  getAllHouses,
+  getByFilters
+}

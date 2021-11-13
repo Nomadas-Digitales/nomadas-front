@@ -21,4 +21,22 @@ const useFetchFilteredHouses = (filters) => {
   return filteredHouses;
 };
 
-export default useFetchFilteredHouses;
+/**Lo mío */
+
+const useFetchAllHouses = (id) => {
+  const [allHouses, setAllHouses] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const results = await houses.getAllHouses(
+        id,
+      );
+      console.log("resultsOfFetch", results);
+      setAllHouses(results.data);
+    };
+    fetchData();
+  }, [id]);
+  return allHouses;
+};
+
+export  {useFetchFilteredHouses, useFetchAllHouses};
