@@ -1,7 +1,6 @@
 %buttonStyle {
   background-color: grey;
   border-radius: 3rem;
-
   height: 2rem;
 }
 
@@ -15,4 +14,22 @@
 %link {
   text-decoration: none;
   color: black;
+}
+/**/
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+/**/
+
+main{
+  display: flex;
+  flex-direction: column; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }

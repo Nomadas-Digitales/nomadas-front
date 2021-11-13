@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import useFetchFilteredHouses from "hooks/useFetchFilteredHouses";
+import {useFetchFilteredHouses} from "hooks/useFetchFilteredHouses";
 
 import Button from "Components/Button";
 import "./catalogue.scss";
