@@ -26,7 +26,9 @@
   .titleContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 3px;
+    height: 2rem;
 
     span {
       font-size: 12px;
@@ -34,7 +36,9 @@
       text-align: left;
     }
     .title {
+      max-height: 2rem;
       font-weight: bolder;
+      overflow: hidden;
     }
   }
 
