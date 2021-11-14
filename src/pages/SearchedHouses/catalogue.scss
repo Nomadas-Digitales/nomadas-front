@@ -16,7 +16,10 @@
 }
 
 .searchContainer {
-  @extend %buttonStyle;
+  background-color: white;
+  border-radius: 3rem;
+  height: 2.5rem;
+  box-shadow: 4px 3px 10px #bbb6b6;
   width: 18rem;
   margin-right: 2rem;
   i {
@@ -39,17 +42,7 @@
   font-size: 2rem;
   text-align: center;
   margin: 1rem;
-}
-
-.housesButton {
-  @extend %buttonStyle;
-  width: 7rem;
-  border: transparent;
-}
-.roomsButton {
-  @extend %buttonStyle;
-  width: 7rem;
-  border: transparent;
+  margin-top: 3rem;
 }
 
 .houseRoomContainer {
@@ -68,6 +61,7 @@
   .housesLink {
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
+    background-color: rgb(168, 168, 236);
   }
   .roomsLink {
     border-bottom-right-radius: 1rem;

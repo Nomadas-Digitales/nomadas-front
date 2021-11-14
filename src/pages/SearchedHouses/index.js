@@ -34,7 +34,7 @@ const SearchedHouse = () => {
     <div>
       <section className="header">
         <section className="navContainer">
-          <div className="goBack">&lt;</div>
+          <Link className="goBack">&lt;</Link>
           <div className="searchContainer">
             <i class="fas fa-search"></i>
             <input type="text" className="searchInput" placeholder="Buscar" />
@@ -49,7 +49,9 @@ const SearchedHouse = () => {
       </div>
       <section className="filterContainer">
         <div>
-          <Link className="link">FILTROS</Link>
+          <Link className="link" to="/cities/valencia/houses/filters">
+            FILTROS
+          </Link>
         </div>
         <div>
           <Link className="link">VER EN MAPA</Link>

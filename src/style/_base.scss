@@ -13,13 +13,6 @@ a {
   color: black;
 }
 
-%buttonStyle {
-  background-color: grey;
-  border-radius: 3rem;
-
-  height: 2rem;
-}
-
 @mixin header($high: 12rem) {
   background-color: grayscale($color: #d6cece);
   height: $high;
