@@ -1,36 +1,117 @@
 @import "../../style/base";
 @import "../../style/text";
 
-.navContainer {
-//   display: flex;
-  flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   padding-top: 2rem;
-}
-.housesButton1 {
-  @extend %buttonStyle;
-  border: transparent;
-  color: $color-white;
-  height: 3rem;
-  
-}
-.searchContainer1 {
-    @extend %buttonStyle;
-    // margin-right: 0 rem;
-    // width: 18rem;   
-}
-.city{
+
+.contenedorPrincipal{
     display: flex;
-    flex-direction:row;
-    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
-img{
-    width: 7rem;
+.contenedorFila{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // box-shadow: .2rem .2rem 1px #444444;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2rem;
     border-radius: 1rem;
 }
 
-li div{
-    padding:.5rem;
+.contenedorFila:first-child {
+    margin-top: 3rem;
 }
 
+.contenedorFila img{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.contenedorTextos{
+    margin-left: 1rem;
+}
+.contenedorIconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerCity {
+    @include header(15rem);
+}
+
+.navContainer {
+    flex-direction: column;
+    
+}
+
+.housesButton1 {
+    @extend %buttonStyle;
+    border: transparent;
+    color: $color-white;
+    height: 3rem;
+    width: 10rem;
+
+}
+
+.searchContainer1 {
+    @extend %buttonStyle;
+    margin-bottom: 2rem;
+    // margin-right: 0 rem;
+    // width: 18rem;   
+}
+
+.searchInput {
+    width: 15rem;
+}
+
+// main {
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: flex-start;
+//     align-items: center;
+// }
+
+// .city {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     box-shadow: 1px 1px 1px #444444;
+//     align-items: center;
+//     border-radius: 1rem;
+//     width: 50%;
+//     margin: 3rem;
+//     box-sizing: border-box;
+//     // justify-content: space-around
+//     // justify-content: flex-start;
+// }
+
+// // img {
+// //     // width: 6rem;
+// //     // border-radius: 1rem;
+    
+// // //   height: auto;
+// // }
+
+// ul {
+//     margin: 0;
+//     padding: 0;
+// }
+
+// .col1 {
+//     padding-right: 2rem;
+//     width: 50%;
+//     // background-image: url(https://images.adsttc.com/media/images/5ec7/e38f/b357/6579/0d00/00ce/newsletter/bionyl-1.jpg?1590158218);
+// }
+
+// // h2 {
+// //     margin: 0;
+// //     padding: 0;
+// // }
+
+// // li div {
+// //     padding-top:1rem;
+// //     padding-left: .5rem;
+// //     max-height: 7rem;
+// //     max-width: 10rem;
+// // }
