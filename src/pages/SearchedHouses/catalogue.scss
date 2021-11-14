@@ -1,19 +1,19 @@
 @import "../../style/base";
 
-.header {
-  @include header;
+.header { 
+  @include header(12rem);
 }
 
-.searchInput {
-  background-color: transparent;
-  border: transparent;
-  height: 2rem;
-  padding-left: 1rem;
-}
+// .searchInput {
+//   background-color: transparent;
+//   border: transparent;
+//   height: 2rem;
+//   padding-left: 1rem;
+// }
 
-img {
-  padding-left: 0.5rem;
-}
+// img {
+//   padding-left: 0.5rem;
+// }
 
 .searchContainer {
   @extend %buttonStyle;
