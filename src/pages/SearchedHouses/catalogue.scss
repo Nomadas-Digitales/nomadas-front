@@ -11,7 +11,7 @@
   padding-left: 1rem;
 }
 
-img {
+.searchImage {
   padding-left: 0.5rem;
 }
 
@@ -19,6 +19,9 @@ img {
   @extend %buttonStyle;
   width: 18rem;
   margin-right: 2rem;
+  i {
+    font-size: 15px;
+  }
 }
 .goBack {
   width: 1rem;
@@ -37,9 +40,6 @@ img {
   text-align: center;
   margin: 1rem;
 }
-.link {
-  @extend %link;
-}
 
 .housesButton {
   @extend %buttonStyle;
@@ -53,7 +53,37 @@ img {
 }
 
 .houseRoomContainer {
+  margin-top: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  .roomsLink,
+  .housesLink {
+    background-color: white;
+    padding: 0.5rem;
+    border: 1px solid black;
+    width: 9.5rem;
+    text-align: center;
+  }
+  .housesLink {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+  .roomsLink {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  .roomsLink.active,
+  .housesLink.active {
+    background-color: blue;
+  }
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

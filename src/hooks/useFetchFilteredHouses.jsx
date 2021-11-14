@@ -15,9 +15,10 @@ const useFetchFilteredHouses = (filters) => {
       );
       console.log("resultsOfFetch", results);
       setFilteredHouses(results.data);
+      console.log("fileteredHouses", filteredHouses);
     };
     fetchData();
-  }, [filters]);
+  }, []);
   return filteredHouses;
 };
 
