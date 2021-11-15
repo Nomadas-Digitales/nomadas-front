@@ -1,5 +1,4 @@
 @import "../../style/base";
-@import "../../style/text";
 
 .contenedorPrincipal {
   display: flex;
@@ -42,10 +41,6 @@ a:active {
 
 .headerCity {
   @include header(15rem);
-}
-
-.navContainer {
-  flex-direction: column;
 }
 
 .housesButton1 {

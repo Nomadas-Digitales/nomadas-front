@@ -1,8 +1,13 @@
+@import "./text";
+@import "./icons";
+
 %buttonStyle {
   background-color: grey;
   border-radius: 3rem;
   height: 2rem;
 }
+$nomadas-green: #1a535c;
+
 html,
 body {
   margin: 0;
@@ -17,6 +22,10 @@ a {
   text-decoration: none;
   color: black;
 }
+input {
+  background-color: transparent;
+  border: transparent;
+}
 
 @mixin header($high) {
   background-color: grayscale($color: #d6cece);
@@ -29,22 +38,4 @@ a {
 %link {
   text-decoration: none;
   color: black;
-}
-.navContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 2rem;
-}
-
-.searchInput {
-  background-color: transparent;
-  border: transparent;
-  height: 2rem;
-  padding-left: 1rem;
-}
-
-body {
-  margin: 0;
-  padding: 0;
 }
