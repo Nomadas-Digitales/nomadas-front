@@ -1,0 +1,64 @@
+.homeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.homeImg {
+  flex: 50%;
+  height: 6rem;
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}
+.homeInfo {
+  flex: 50%;
+  height: 6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+    height: 2rem;
+
+    span {
+      font-size: 12px;
+      margin: 0px;
+      text-align: left;
+    }
+    .title {
+      max-height: 2rem;
+      font-weight: bolder;
+      overflow: hidden;
+    }
+  }
+
+  .description {
+    p {
+      line-height: 1px;
+      font-size: 12px;
+    }
+    .rooms,
+    .bathrooms {
+      font-size: 8px;
+    }
+  }
+  .homeValoration {
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin-top: 0px;
+      padding-top: 0px;
+      font-size: 11px;
+    }
+  }
+}

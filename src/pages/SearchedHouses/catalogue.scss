@@ -1,59 +1,69 @@
 @import "../../style/base";
 
-.header { 
-  @include header(12rem);
+.header {
+  @include header(13rem);
 }
 
-// .searchInput {
-//   background-color: transparent;
-//   border: transparent;
-//   height: 2rem;
-//   padding-left: 1rem;
-// }
-
-// img {
-//   padding-left: 0.5rem;
-// }
+.searchImage {
+  padding-left: 0.5rem;
+}
 
 .searchContainer {
-  @extend %buttonStyle;
+  background-color: white;
+  border-radius: 3rem;
+  height: 2.5rem;
+  box-shadow: 4px 3px 10px #bbb6b6;
   width: 18rem;
   margin-right: 2rem;
+  i {
+    font-size: 15px;
+  }
 }
 .goBack {
   width: 1rem;
   padding-right: 0.5rem;
 }
 
-// .navContainer {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding-top: 2rem;
-// }
-
 .title {
   font-size: 2rem;
   text-align: center;
   margin: 1rem;
-}
-.link {
-  @extend %link;
-}
-
-.housesButton {
-  @extend %buttonStyle;
-  width: 7rem;
-  border: transparent;
-}
-.roomsButton {
-  @extend %buttonStyle;
-  width: 7rem;
-  border: transparent;
+  margin-top: 3rem;
 }
 
 .houseRoomContainer {
+  margin-top: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  .roomsLink,
+  .housesLink {
+    background-color: white;
+    padding: 0.5rem;
+    border: 1px solid black;
+    width: 9.5rem;
+    text-align: center;
+  }
+  .housesLink {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    background-color: rgb(168, 168, 236);
+  }
+  .roomsLink {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  .roomsLink.active,
+  .housesLink.active {
+    background-color: blue;
+  }
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

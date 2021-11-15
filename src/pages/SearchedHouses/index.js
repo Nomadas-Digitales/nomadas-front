@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import {useFetchFilteredHouses} from "hooks/useFetchFilteredHouses";
 
-import Button from "Components/Button";
+import HouseCard from "Components/HouseCard";
 import "./catalogue.scss";
 
 const SearchedHouse = () => {
@@ -22,35 +22,50 @@ const SearchedHouse = () => {
     }));
   };
 
-  const houses = useFetchFilteredHouses(filters);
+  const houses = useFetchFilteredHouses({
+    distance: "",
+    priceMin: "",
+    priceMax: "",
+    distanceBeach: "",
+    internet: "",
+  });
   console.log("houses", houses);
   return (
-    <section>
+    <div>
       <section className="header">
         <section className="navContainer">
-          <div className="goBack">&lt;</div>
+          <Link className="goBack">&lt;</Link>
           <div className="searchContainer">
-            <img alt="0" />
+            <i class="fas fa-search"></i>
             <input type="text" className="searchInput" placeholder="Buscar" />
           </div>
         </section>
         <h1 className="title">VALENCIA</h1>
-        <section className="houseRoomContainer">
-          <button className="housesButton">
-            <Link className="link">Viviendas</Link>
-          </button>
-          <button className="roomsButton">
-            <Link classname="link">Habitaciones</Link>
-          </button>
-        </section>
-      </section>
+      </section>{" "}
+      <div className="houseRoomContainer">
+        <Link className="housesLink">VIVIENDAS</Link>
+
+        <Link className="roomsLink">HABITACIÓN</Link>
+      </div>
       <section className="filterContainer">
-        <Link className="link">Filters</Link>
-        <Link className="link">Map</Link>
-        <Link className="link">Order</Link>
+        <div>
+          <Link className="link" to="/cities/valencia/houses/filters">
+            FILTROS
+          </Link>
+        </div>
+        <div>
+          <Link className="link">VER EN MAPA</Link>
+        </div>
+        <div>
+          <Link className="link">ORDENAR</Link>
+        </div>
       </section>
-      <section className="catalogueContainer"></section>
-    </section>
+      <section className="catalogueContainer">
+        {houses.map((house, i) => {
+          return <HouseCard key={i} {...house} />;
+        })}
+      </section>
+    </div>
   );
 };
 
