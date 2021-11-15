@@ -13,7 +13,7 @@ a {
   color: black;
 }
 
-@mixin header($high: 12rem) {
+@mixin header($high) {
   background-color: grayscale($color: #d6cece);
   height: $high;
   width: 100vw;
