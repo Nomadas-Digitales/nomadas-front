@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("icons/icomoon.eot?dxhlfn");
+  src: url("icons/icomoon.eot?dxhlfn#iefix") format("embedded-opentype"),
+    url("icons/icomoon.ttf?dxhlfn") format("truetype"),
+    url("icons/icomoon.woff?dxhlfn") format("woff"),
+    url("icons/icomoon.svg?dxhlfn#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-TipoLupa:before {
+  content: "\e900";
+  color: #1a535c;
+}
+.icon-ActivoTrue:before {
+  content: "\e900";
+  color: #1a535c;
+}
+.icon-TipoAmoblado:before {
+  content: "\e902";
+  color: #ec704f;
+}
+.icon-TipoCarSharing:before {
+  content: "\e903";
+  color: #ec704f;
+}
+.icon-TipoCity:before {
+  content: "\e904";
+  color: #ec704f;
+}
+.icon-TipoClima:before {
+  content: "\e905";
+  color: #ec704f;
+}
+.icon-TipoCorazon:before {
+  content: "\e906";
+  color: #ec704f;
+}
+.icon-ActivoFalse:before {
+  content: "\e906";
+  color: #ec704f;
+}
+.icon-TipoCorazon1:before {
+  content: "\e907";
+  color: #ec704f;
+}
+.icon-ActivoTrue1:before {
+  content: "\e907";
+  color: #ec704f;
+}
+.icon-TipoDistancia:before {
+  content: "\e908";
+  color: #ec704f;
+}
+.icon-TipoDormitorio:before {
+  content: "\e909";
+  color: #ec704f;
+}
+.icon-TipoFacebook:before {
+  content: "\e90a";
+  color: #1a535c;
+}
+.icon-Tipofavoritos:before {
+  content: "\e90b";
+  color: #ec704f;
+}
+.icon-ActivoTrue2:before {
+  content: "\e90b";
+  color: #ec704f;
+}
+.icon-TipoFiltros:before {
+  content: "\e90c";
+  color: #1a535c;
+}
+.icon-TipoGaraje:before {
+  content: "\e90e";
+  color: #ec704f;
+}
+.icon-TipoGoogle:before {
+  content: "\e90f";
+  color: #1a535c;
+}
+.icon-TipoMapa:before {
+  content: "\e910";
+  color: #1a535c;
+}
+.icon-TipoMetros:before {
+  content: "\e912";
+  color: #ec704f;
+}
+.icon-TipoPiscina:before {
+  content: "\e913";
+  color: #ec704f;
+}
+.icon-TipoPlaya:before {
+  content: "\e914";
+  color: #ec704f;
+}
+.icon-TipoPrecio:before {
+  content: "\e915";
+  color: #ec704f;
+}
+.icon-TipoRadiador:before {
+  content: "\e916";
+  color: #ec704f;
+}
+.icon-TipoRuido:before {
+  content: "\e917";
+  color: #ec734f;
+}
+.icon-TipoSeguridad:before {
+  content: "\e918";
+  color: #ec704f;
+}
+.icon-TipoTranquilidad:before {
+  content: "\e919";
+  color: #ec704f;
+}
+.icon-TipoTransporte:before {
+  content: "\e91a";
+  color: #ec704f;
+}
+.icon-TipoWIFI:before {
+  content: "\e91b";
+  color: #ec704f;
+}
+.icon-ActivoTrue5:before {
+  content: "\e91b";
+  color: #ec704f;
+}
