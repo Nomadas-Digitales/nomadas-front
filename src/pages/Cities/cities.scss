@@ -1,71 +1,70 @@
 @import "../../style/base";
 @import "../../style/text";
 
-
-.contenedorPrincipal{
-    display: flex;
-    flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.contenedorPrincipal {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.contenedorFila{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 2rem;
-    border-radius: 1rem;
+.contenedorFila {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 2rem;
+  border-radius: 1rem;
 }
 
 .contenedorFila:first-child {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
-.contenedorFila img{
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+.contenedorFila img {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
-.contenedorFila a:link, a:visited, a:active {
-    text-decoration:none;
-    color: black;
+.contenedorFila a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
 }
 
-.contenedorTextos{
-    margin-left: 1rem;
+.contenedorTextos {
+  margin-left: 1rem;
 }
-.contenedorIconos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.contenedorIconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .headerCity {
-    @include header(15rem);
+  @include header(15rem);
 }
 
 .navContainer {
-    flex-direction: column;
-    
+  flex-direction: column;
 }
 
 .housesButton1 {
-    @extend %buttonStyle;
-    border: transparent;
-    color: $color-white;
-    height: 3rem;
-    width: 10rem;
-
+  @extend %buttonStyle;
+  border: transparent;
+  color: $color-white;
+  height: 3rem;
+  width: 10rem;
 }
 
 .searchContainer1 {
-    @extend %buttonStyle;
-    margin-bottom: 2rem;
-    // margin-right: 0 rem;
-    // width: 18rem;   
+  @extend %buttonStyle;
+  margin-bottom: 2rem;
+  // margin-right: 0 rem;
+  // width: 18rem;
 }
 
 .searchInput {
-    width: 15rem;
+  width: 15rem;
 }
 
 // main {
@@ -92,7 +91,7 @@
 // // img {
 // //     // width: 6rem;
 // //     // border-radius: 1rem;
-    
+
 // // //   height: auto;
 // // }
 

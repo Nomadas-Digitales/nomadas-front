@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {useFetchFilteredHouses} from "hooks/useFetchFilteredHouses";
+import { useFetchFilteredHouses } from "hooks/useFetchFilteredHouses";
 
 import HouseCard from "Components/HouseCard";
+import Searcher from "Components/Searcher";
+import Nav from "Components/Nav";
 import "./catalogue.scss";
 
 const SearchedHouse = () => {
@@ -33,31 +35,34 @@ const SearchedHouse = () => {
   return (
     <div>
       <section className="header">
-        <section className="navContainer">
-          <Link className="goBack">&lt;</Link>
-          <div className="searchContainer">
-            <i class="fas fa-search"></i>
-            <input type="text" className="searchInput" placeholder="Buscar" />
-          </div>
-        </section>
+        <Nav>
+          <Link className="icon-TipoFlechaAtras"></Link>
+          <Searcher />
+          <Link className="icon-TipoMenuHamb"></Link>
+        </Nav>
         <h1 className="title">VALENCIA</h1>
-      </section>{" "}
+      </section>
       <div className="houseRoomContainer">
-        <Link className="housesLink">VIVIENDAS</Link>
+        <Link className="housesLink" to="/cities/valencia/searchedhouses">
+          Viviendas
+        </Link>
 
-        <Link className="roomsLink">HABITACIÓN</Link>
+        <Link className="roomsLink">Habitaciones</Link>
       </div>
       <section className="filterContainer">
         <div>
-          <Link className="link" to="/cities/valencia/houses/filters">
-            FILTROS
+          <span className="icon-TipoFiltros"></span>
+          <Link className="filters" to="/cities/valencia/houses/filters">
+            Fitros
           </Link>
         </div>
         <div>
-          <Link className="link">VER EN MAPA</Link>
+          <span className="icon-TipoMapa"></span>
+          <Link className="map">Ver mapa</Link>
         </div>
         <div>
-          <Link className="link">ORDENAR</Link>
+          <span className="icon-TipoOrden"></span>
+          <Link className="order">Ordenar</Link>
         </div>
       </section>
       <section className="catalogueContainer">
