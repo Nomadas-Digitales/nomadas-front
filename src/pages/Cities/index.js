@@ -1,24 +1,23 @@
 import "./cities.scss";
 import { Link } from "react-router-dom";
 import ComboBox from "../../Components/ComboBox";
-import Nav from "Components/Nav";
-import Searcher from "Components/Searcher";
-
 const Cities = () => {
   return (
     <section>
       <section className="headerCity">
-        <Nav>
-          <Searcher />
-          <span className="icon-TipoMenuHamb"></span>
-        </Nav>
-        <p>¿AÚN NO HAS DECIDIDO?</p>
-        <Link className="link">
-          <button className="housesButton1">
-            ¡TE <br />
-            ACONSEJAMOS!
-          </button>
-        </Link>
+        <section className="navContainer">
+          <div className="searchContainer1">
+            <ComboBox className="searchInput" />
+            <input type="text" className="searchInput" placeholder="Buscar" />
+          </div>
+          <p>¿AÚN NO HAS DECIDIDO?</p>
+          <Link className="link">
+            <button className="housesButton1">
+              ¡TE <br />
+              ACONSEJAMOS!
+            </button>
+          </Link>
+        </section>
       </section>
 
       <div class="contenedorPrincipal">

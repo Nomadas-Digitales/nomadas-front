@@ -38,26 +38,31 @@ const SearchedHouse = () => {
         <Nav>
           <Link className="icon-TipoFlechaAtras"></Link>
           <Searcher />
-          <span className="icon-TipoMenuHamb"></span>
+          <Link className="icon-TipoMenuHamb"></Link>
         </Nav>
         <h1 className="title">VALENCIA</h1>
-      </section>{" "}
+      </section>
       <div className="houseRoomContainer">
-        <Link className="housesLink">VIVIENDAS</Link>
+        <Link className="housesLink" to="/cities/valencia/searchedhouses">
+          Viviendas
+        </Link>
 
-        <Link className="roomsLink">HABITACIÓN</Link>
+        <Link className="roomsLink">Habitaciones</Link>
       </div>
       <section className="filterContainer">
         <div>
-          <Link className="link" to="/cities/valencia/houses/filters">
-            FILTROS
+          <span className="icon-TipoFiltros"></span>
+          <Link className="filters" to="/cities/valencia/houses/filters">
+            Fitros
           </Link>
         </div>
         <div>
-          <Link className="link">VER EN MAPA</Link>
+          <span className="icon-TipoMapa"></span>
+          <Link className="map">Ver mapa</Link>
         </div>
         <div>
-          <Link className="link">ORDENAR</Link>
+          <span className="icon-TipoOrden"></span>
+          <Link className="order">Ordenar</Link>
         </div>
       </section>
       <section className="catalogueContainer">
