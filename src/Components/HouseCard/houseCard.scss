@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 15px;
+  border-radius: 0.938rem;
   overflow: hidden;
-  margin-left: 23px;
-  margin-right: 23px;
-  margin-top: 24px;
+  margin-left: 1.438rem;
+  margin-right: 1.438rem;
+  margin-top: 1.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .homeImg {
@@ -29,12 +29,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3px;
+    margin-top: 0.188rem;
     height: 2rem;
 
     span {
-      font-size: 12px;
-      margin: 0px;
+      font-size: 0.75rem;
+      margin: 0;
       text-align: left;
     }
     .title {
@@ -46,21 +46,21 @@
 
   .description {
     p {
-      line-height: 1px;
-      font-size: 12px;
+      line-height: 0.063rem;
+      font-size: 0.75rem;
     }
     .rooms,
     .bathrooms {
-      font-size: 8px;
+      font-size: 0.5rem;
     }
   }
   .homeValoration {
     display: flex;
     justify-content: space-between;
     p {
-      margin-top: 0px;
-      padding-top: 0px;
-      font-size: 11px;
+      margin-top: 0;
+      padding-top: 0;
+      font-size: 0.688rem;
     }
   }
 }
