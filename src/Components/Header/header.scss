@@ -2,7 +2,6 @@
 
 .header {
   @include header(13.181rem);
-  @include headerBackgroundImg("FONDO-VALENCIA.jpg");
 
   .title {
     font-size: 2.25rem;

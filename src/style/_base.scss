@@ -3,7 +3,11 @@
 $images-path: "../static";
 
 @mixin headerBackgroundImg($img) {
-  background-image: url("#{$images-path}/#{$img}");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("#{$images-path}/#{$img}");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;

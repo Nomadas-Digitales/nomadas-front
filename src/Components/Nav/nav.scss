@@ -1,19 +1,16 @@
-.three {
+.nav {
   display: flex;
   padding-top: 2rem;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
   font-size: 1.875rem;
 }
-
+.three {
+  justify-content: space-evenly;
+}
 .two {
-  display: flex;
-  padding-top: 2rem;
   padding-right: 1.275rem;
   padding-left: 1.134rem;
-  flex-direction: row;
-  align-items: center;
+
   justify-content: space-between;
-  font-size: 1.875rem;
 }
