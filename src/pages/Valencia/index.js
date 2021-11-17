@@ -1,5 +1,11 @@
+import Header from "Components/Header";
+
 const Valencia = () => {
-  return <h1>Valencia</h1>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default Valencia;

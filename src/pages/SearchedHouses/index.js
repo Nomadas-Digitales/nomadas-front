@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { useFetchFilteredHouses } from "hooks/useFetchFilteredHouses";
 
 import HouseCard from "Components/HouseCard";
-import Searcher from "Components/Searcher";
-import Nav from "Components/Nav";
+import Header from "Components/Header";
 import "./catalogue.scss";
 
 const SearchedHouse = () => {
@@ -34,14 +33,7 @@ const SearchedHouse = () => {
   console.log("houses", houses);
   return (
     <div>
-      <section className="header">
-        <Nav>
-          <Link className="icon-TipoFlechaAtras"></Link>
-          <Searcher />
-          <Link className="icon-TipoMenuHamb"></Link>
-        </Nav>
-        <h1 className="title">VALENCIA</h1>
-      </section>
+      <Header />
       <div className="houseRoomContainer">
         <Link className="housesLink" to="/cities/valencia/searchedhouses">
           Viviendas
