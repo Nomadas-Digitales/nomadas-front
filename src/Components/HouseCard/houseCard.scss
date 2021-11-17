@@ -11,7 +11,7 @@
 }
 .homeImg {
   flex: 50%;
-  height: 6rem;
+  height: 6.5rem;
 
   .img {
     width: 100%;
@@ -21,46 +21,55 @@
 }
 .homeInfo {
   flex: 50%;
-  height: 6rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  height: 6.5rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .titleContainer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     margin-top: 0.188rem;
-    height: 2rem;
+    overflow: hidden;
 
-    span {
-      font-size: 0.75rem;
-      margin: 0;
-      text-align: left;
-    }
     .title {
       max-height: 2rem;
-      font-weight: bolder;
-      overflow: hidden;
+      font-family: CirceRoundedBold;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      letter-spacing: -0.022em;
+      color: #000000;
+    }
+    .icon-TipoCorazon {
+      margin-right: 1rem;
     }
   }
 
   .description {
+    color: #000000;
     p {
       line-height: 0.063rem;
-      font-size: 0.75rem;
+      font-size: 0.875rem;
+      font-family: CirceRoundedRegular;
     }
     .rooms,
     .bathrooms {
-      font-size: 0.5rem;
+      font-size: 0.65rem;
     }
   }
   .homeValoration {
     display: flex;
     justify-content: space-between;
-    p {
-      margin-top: 0;
-      padding-top: 0;
-      font-size: 0.688rem;
+    div {
+      display: flex;
+      align-items: center;
+      span {
+        margin-right: 5px;
+        font-size: 14px;
+        font-family: CirceRoundedRegular;
+      }
     }
   }
 }

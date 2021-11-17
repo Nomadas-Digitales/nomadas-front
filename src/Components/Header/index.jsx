@@ -1,7 +1,3 @@
-import { Link } from "react-router-dom";
-
-import Searcher from "Components/Searcher";
-import Nav from "Components/Nav";
 import "./header.scss";
 
 const Header = (props) => {

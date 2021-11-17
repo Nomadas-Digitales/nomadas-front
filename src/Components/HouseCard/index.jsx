@@ -1,4 +1,5 @@
 import "./houseCard.scss";
+import { Link } from "react-router-dom";
 
 const HouseCard = ({
   address,
@@ -16,8 +17,8 @@ const HouseCard = ({
       </div>
       <div className="homeInfo">
         <div className="titleContainer">
-          <span className="title">{address}</span>
-          <span>X</span>
+          <Link className="title">{address}</Link>
+          <Link className="icon-TipoCorazon"></Link>
         </div>
 
         <div className="description">
@@ -27,8 +28,14 @@ const HouseCard = ({
         </div>
 
         <div className="homeValoration">
-          <p>{score} *</p>
-          <p>{internet}Mbps ))</p>
+          <div>
+            <span>{score}</span>
+            <span className="icon-Tipofavoritos"></span>
+          </div>
+          <div className="internet">
+            <span>{internet}Mbps</span>
+            <span className="icon-TipoWIFI"></span>
+          </div>
         </div>
       </div>
     </div>
