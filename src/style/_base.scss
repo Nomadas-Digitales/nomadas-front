@@ -1,5 +1,13 @@
 @import "./text";
 @import "./icons";
+$images-path: "../static";
+
+@mixin headerBackgroundImg($img) {
+  background-image: url("#{$images-path}/#{$img}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
 
 %buttonStyle {
   background-color: grey;
@@ -25,7 +33,6 @@ a {
 }
 
 @mixin header($high) {
-  background-color: grayscale($color: #d6cece);
   height: $high;
   width: 100vw;
   margin: 0;
