@@ -4,14 +4,10 @@ import Searcher from "Components/Searcher";
 import Nav from "Components/Nav";
 import "./header.scss";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <section className="header">
-      <Nav>
-        <Link className="icon-TipoFlechaAtras"></Link>
-        <Searcher />
-        <Link className="icon-TipoMenuHamb"></Link>
-      </Nav>
+      {props.children}
       <h1 className="title">VALENCIA</h1>
     </section>
   );

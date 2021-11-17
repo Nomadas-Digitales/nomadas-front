@@ -4,6 +4,8 @@ import { useFetchFilteredHouses } from "hooks/useFetchFilteredHouses";
 
 import HouseCard from "Components/HouseCard";
 import Header from "Components/Header";
+import Nav from "Components/Nav";
+import Searcher from "Components/Searcher";
 import "./catalogue.scss";
 
 const SearchedHouse = () => {
@@ -33,7 +35,13 @@ const SearchedHouse = () => {
   console.log("houses", houses);
   return (
     <div>
-      <Header />
+      <Header>
+        <Nav>
+          <Link className="icon-TipoFlechaAtras"></Link>
+          <Searcher />
+          <Link className="icon-TipoMenuHamb"></Link>
+        </Nav>
+      </Header>
       <div className="houseRoomContainer">
         <Link className="housesLink" to="/cities/valencia/searchedhouses">
           Viviendas
