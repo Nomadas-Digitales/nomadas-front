@@ -18,7 +18,7 @@ const HouseCard = ({
       <div className="homeInfo">
         <div className="titleContainer">
           <Link className="title">{address}</Link>
-          <Link className="icon-TipoCorazon"></Link>
+          <span className="icon-TipoCorazon falseClick"></span>
         </div>
 
         <div className="description">

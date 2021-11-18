@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useFetchFilteredHouses } from "hooks/useFetchFilteredHouses";
+import { useHistory } from "react-router-dom";
 
 import HouseCard from "Components/HouseCard";
 import Header from "Components/Header";
@@ -16,6 +17,8 @@ const SearchedHouse = () => {
     distanceBeach: "",
     internet: "",
   });
+
+  const history = useHistory();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,17 +40,18 @@ const SearchedHouse = () => {
     <div>
       <Header>
         <Nav>
-          <Link className="icon-TipoFlechaAtras"></Link>
+          <Link
+            className="icon-TipoFlechaAtras"
+            onClick={history.goBack}
+          ></Link>
           <Searcher />
-          <Link className="icon-TipoMenuHamb"></Link>
+          <span className="icon-TipoMenuHamb falseClick"></span>
         </Nav>
       </Header>
       <div className="houseRoomContainer">
-        <Link className="housesLink" to="/cities/valencia/searchedhouses">
-          Viviendas
-        </Link>
+        <span className="housesLink falseClick">Viviendas</span>
 
-        <Link className="roomsLink">Habitaciones</Link>
+        <span className="roomsLink falseClick">Habitaciones</span>
       </div>
       <section className="filterContainer">
         <div>
@@ -58,11 +62,11 @@ const SearchedHouse = () => {
         </div>
         <div>
           <span className="icon-TipoMapa"></span>
-          <Link className="map">Ver mapa</Link>
+          <span className="map falseClick">Ver mapa</span>
         </div>
         <div>
           <span className="icon-TipoOrden"></span>
-          <Link className="order">Ordenar</Link>
+          <span className="order falseClick">Ordenar</span>
         </div>
       </section>
       <section className="catalogueContainer">

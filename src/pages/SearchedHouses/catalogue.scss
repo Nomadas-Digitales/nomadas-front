@@ -47,12 +47,15 @@
     color: #000000;
     display: flex;
     align-items: flex-end;
-    span {
+    .icon-TipoFiltros,
+    .icon-TipoMapa,
+    .icon-TipoOrden {
       color: $nomadas-green;
       font-size: 1.25rem;
     }
   }
 }
+
 .header {
   @include headerBackgroundImg("FONDO-VALENCIA.jpg");
 }
