@@ -9,6 +9,7 @@ const HouseCard = ({
   score,
   internet,
   thumbnail,
+  propertycode,
 }) => {
   return (
     <div className="homeContainer">
@@ -17,7 +18,12 @@ const HouseCard = ({
       </div>
       <div className="homeInfo">
         <div className="titleContainer">
-          <Link className="title">{address}</Link>
+          <Link
+            className="title"
+            to={`/cities/valencia/houses/detail/:${propertycode}`}
+          >
+            {address}
+          </Link>
           <span className="icon-TipoCorazon falseClick"></span>
         </div>
 
