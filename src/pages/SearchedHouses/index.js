@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useFetchFilteredHouses } from "hooks/useFetchFilteredHouses";
-import { useHistory } from "react-router-dom";
 
 import HouseCard from "Components/HouseCard";
 import Header from "Components/Header";
@@ -35,7 +34,7 @@ const SearchedHouse = () => {
     distanceBeach: "",
     internet: "",
   });
-  console.log("houses", houses);
+
   return (
     <div>
       <Header>
