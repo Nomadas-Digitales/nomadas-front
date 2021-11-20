@@ -1,0 +1,44 @@
+@import "../../style/base";
+
+.slidecontainer {
+  width: 16rem;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  width: 100%; /* Full-width */
+  height: 15px; /* Specified height */
+  background: #e5e5e5;
+  border-radius: 20px; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  overflow: hidden;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: $nomadas-green; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  box-shadow: -210px 0 0 200px $nomadas-green;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: $nomadas-green; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  box-shadow: -210px 0 0 200px $nomadas-green;
+}
