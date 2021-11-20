@@ -20,7 +20,7 @@ const HouseCard = ({
         <div className="titleContainer">
           <Link
             className="title"
-            to={`/cities/valencia/houses/detail/:${propertycode}`}
+            to={`/cities/valencia/houses/detail/${propertycode}`}
           >
             {address}
           </Link>
