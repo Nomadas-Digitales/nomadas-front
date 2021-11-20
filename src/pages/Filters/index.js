@@ -1,14 +1,16 @@
 import { Link, useHistory } from "react-router-dom";
 import { set, useForm } from "react-hook-form";
-import { useState } from "react";
+import context from "store/context";
 
 import Nav from "Components/Nav";
 import Slider from "Components/Slider";
 import "./filters.scss";
+import { useContext } from "react";
 
 const Filters = () => {
+  const { updateFilterValues } = useContext(context);
   const history = useHistory();
-  const [filterValues, setFilterValues] = useState({});
+
   const prices = [
     100,
     150,
@@ -50,10 +52,6 @@ const Filters = () => {
     1950,
     2000,
   ];
-
-  const updateFilterValues = ({ target: { name, value } }) => {
-    setFilterValues((prevState) => ({ ...prevState, [name]: value }));
-  };
 
   return (
     <div>
