@@ -1,0 +1,42 @@
+.detailCity {
+  display: flex;
+  flex-direction: row;
+}
+.detailCityLeft {
+  width: 50%;
+  padding-left: 1.5rem;
+}
+
+.detailCityRight {
+  width: 50%;
+  padding-left: 3rem;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+
+.icon {
+  display: flex;
+  border: 1px solid #ec704f;
+  border-radius: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  span {
+    font-size: 1.5rem;
+  }
+}
+.detail p {
+  font-family: CirceRoundedRegular;
+  font-size: 12px;
+  line-height: 15px;
+  align-items: center;
+  letter-spacing: -0.333333px;
+  color: #000000;
+  margin: 0;
+  margin-left: 0.5rem;
+}
