@@ -1,5 +1,4 @@
 import { Link, useHistory } from "react-router-dom";
-import { set, useForm } from "react-hook-form";
 import context from "store/context";
 
 import Nav from "Components/Nav";
@@ -57,28 +56,39 @@ const Filters = () => {
     <div>
       <Nav>
         <Link className="icon-TipoFlechaAtras" onClick={history.goBack}></Link>
-        <span>FILTROS</span>
+        <span className="filterPageTitle">FILTROS</span>
         <span className="icon-TipoMenuHamb falseClick"></span>
       </Nav>
-      <form>
-        <div className="distanceCenter">
-          <p>Distancia max. al centro</p>
-          <Slider handler={updateFilterValues} max="15" name="distance" />
+      <div>
+        <div className="distanceCenterFP">
+          <p className="filterTitles">Distancia max. al centro</p>
+          <div className="slideAndMeasure">
+            <Slider handler={updateFilterValues} max="15" name="distance" />
+            <p className="measureFilters">km</p>
+          </div>
         </div>
-        <div className="price">
-          <p>Precio</p>
+        <div className="priceFP">
+          <p className="filterTitles">Precio</p>
           <div className="dropDown">
-            <select name="priceMin" onChange={updateFilterValues}>
+            <select
+              name="priceMin"
+              className="min"
+              onChange={updateFilterValues}
+            >
               <option hidden selected>
-                Min
+                Min.
               </option>
               {prices.map((price) => {
                 return <option value={price}>{price}</option>;
               })}
             </select>
-            <select name="priceMax" onChange={updateFilterValues}>
+            <select
+              name="priceMax"
+              className="max"
+              onChange={updateFilterValues}
+            >
               <option hidden selected>
-                Max
+                Max.
               </option>
               {prices.map((price) => {
                 return <option value={price}>{price}</option>;
@@ -86,18 +96,73 @@ const Filters = () => {
             </select>
           </div>
         </div>
-        <div className="size">
-          <p>Tamaño</p>
+        <div className="sizeFP">
+          <p className="filterTitles">Tamaño</p>
+          <div className="dropDown">
+            <select
+              name="priceMin"
+              className="min"
+              onChange={updateFilterValues}
+            >
+              <option hidden selected>
+                Min.
+              </option>
+              {prices.map((price) => {
+                return <option value={price}>{price}</option>;
+              })}
+            </select>
+            <select
+              name="priceMax"
+              className="max"
+              onChange={updateFilterValues}
+            >
+              <option hidden selected>
+                Max.
+              </option>
+              {prices.map((price) => {
+                return <option value={price}>{price}</option>;
+              })}
+            </select>
+          </div>
         </div>
-        <div className="internet">
-          <p>Internet</p>
-          <Slider handler={updateFilterValues} max="15" name="internet" />
+        <div className="internetFP">
+          <p className="filterTitles">Internet</p>
+          <div className="slideAndMeasure">
+            <Slider handler={updateFilterValues} max="800" name="internet" />
+            <p className="measureFilters">Mbps</p>
+          </div>
         </div>
-        <div className="distanceBeach">
-          <p>Distancia a la playa</p>
-          <Slider handler={updateFilterValues} max="15" name="distanceBeach" />
+        <div className="distanceBeachFP">
+          <p className="filterTitles">Distancia a la playa</p>
+          <div className="slideAndMeasure">
+            <Slider
+              handler={updateFilterValues}
+              max="15"
+              name="distanceBeach"
+            />
+            <p className="measureFilters">km</p>
+          </div>
         </div>
-      </form>
+        <div className="distanceCoworkingFP">
+          <p className="filterTitles">Distancia a Coworking</p>
+          <div className="slideAndMeasure">
+            <Slider
+              handler={updateFilterValues}
+              max="15"
+              name="distanceCoworking"
+            />
+            <p className="measureFilters">km</p>
+          </div>
+        </div>
+        <div className="showResults">
+          <Link
+            to="/cities/valencia/searchedhouses"
+            className="showResultsLink"
+          >
+            Mostrar resultados
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

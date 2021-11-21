@@ -28,7 +28,7 @@ const HouseCard = ({
         </div>
 
         <div className="description">
-          <p className="price">{price}€/mes</p>
+          <p>{price}€/mes</p>
           <p className="rooms">{rooms} dormitorios</p>
           <p className="bathrooms">{bathrooms} baños</p>
         </div>
@@ -38,7 +38,7 @@ const HouseCard = ({
             <span>{score}</span>
             <span className="icon-Tipofavoritos"></span>
           </div>
-          <div className="internet">
+          <div>
             <span>{internet}Mbps</span>
             <span className="icon-TipoWIFI"></span>
           </div>

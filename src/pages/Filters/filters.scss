@@ -1,44 +1,79 @@
 @import "../../style/base";
 
-.slidecontainer {
-  width: 16rem;
+.filterPageTitle {
+  width: 15.5rem;
+  font-family: CirceRoundedBold;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.022em;
+  color: $nomadas-green;
+}
+.distanceCenterFP {
+  margin-top: 25px;
+}
+.slideAndMeasure {
+  display: flex;
+  .measureFilters {
+    color: #333333;
+    font-family: CirceRoundedRegular;
+    font-size: 14px;
+    letter-spacing: -0.022em;
+    align-items: center;
+  }
+}
+.distanceCenterFP,
+.priceFP,
+.sizeFP,
+.internetFP,
+.distanceBeachFP {
+  border-bottom: 1px solid #dadada;
+}
+.filterTitles {
+  width: 304px;
+  margin-left: 23px;
+  margin-right: 33px;
+  margin-bottom: 0px;
+  margin-top: 12px;
+  font-family: CirceRoundedRegular;
+  font-size: 22px;
+  line-height: 21px;
+  letter-spacing: -0.022em;
+  color: #333333;
 }
 
-.slider {
-  -webkit-appearance: none; /* Override default CSS styles */
-  width: 100%; /* Full-width */
-  height: 15px; /* Specified height */
-  background: #e5e5e5;
-  border-radius: 20px; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
-  transition: opacity 0.2s;
-  overflow: hidden;
+.dropDown {
+  padding-top: 12px;
+  display: flex;
+  margin-left: 23px;
+  margin-right: 24px;
+  margin-bottom: 32px;
+  justify-content: space-between;
+  .min,
+  .max {
+    width: 120px;
+    height: 24px;
+    background: #e5e5e5;
+    border-radius: 20px;
+  }
 }
 
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 15px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  border-radius: 50%;
-  background: $nomadas-green; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-  box-shadow: -210px 0 0 200px $nomadas-green;
-}
-
-.slider::-moz-range-thumb {
-  width: 15px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  border-radius: 50%;
-  background: $nomadas-green; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-  box-shadow: -210px 0 0 200px $nomadas-green;
+.showResults {
+  height: 40px;
+  width: 192px;
+  background-color: $nomadas-green;
+  border: 1px solid #1a535c;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 85px;
+  margin-right: 85px;
+  margin-top: 15px;
+  a {
+    color: #ffffff;
+  }
+  .showResultsLink {
+    font-family: CirceRoundedRegular;
+    font-size: 16px;
+  }
 }

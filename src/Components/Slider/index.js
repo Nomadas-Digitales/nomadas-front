@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./slider.scss";
 
 const Slider = ({ handler, max, name }) => {
   const [value, setValue] = useState(0);
@@ -19,7 +20,7 @@ const Slider = ({ handler, max, name }) => {
         onChange={_onChange}
         defaultValue="0"
       />
-      <input type="number" value={value || 0} readOnly />
+      <input className="valueBox" type="number" value={value || 0} readOnly />
     </div>
   );
 };
