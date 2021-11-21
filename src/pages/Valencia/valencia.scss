@@ -1,0 +1,116 @@
+@import "../../style/base";
+@import "../../style/text";
+@import "../../style/icons";
+
+.houseRoomContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  .roomsLink,
+  .housesLink {
+    background-color: white;
+    padding: 0.5rem;
+    border: 1px solid $nomadas-green;
+    width: 9.5rem;
+    text-align: center;
+    letter-spacing: -0.022em;
+    font-size: 1.125rem;
+    font-family: CirceRoundedRegular;
+  }
+  .housesLink {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    color: $nomadas-green;
+  }
+  .roomsLink {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: $nomadas-green;
+  }
+}
+
+h2 {
+font-family: CirceRoundedBold;
+font-size: 1.5rem;
+line-height: 1.938rem;
+letter-spacing: -0.022em;
+color: #1A535C;
+padding-left: 1.6rem;
+}
+
+.housesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.houseDetail {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 3.51546px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  width: 11rem;
+  height: 12.5rem;
+
+  img {
+    border-radius: 8px;
+    width: 9rem;
+    margin: 1rem;
+  }
+
+  h3 {
+    font-family: CirceRoundedBold;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.022em;
+    padding: 0;
+    margin: 0;
+    width: 6.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  p {
+    font-family: CirceRoundedRegular;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.022em;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.houseDetailDescription{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.houseDetailText{
+  width: 60%;
+}
+
+.houseDetailIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.houseDetailTextIcon{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
