@@ -55,10 +55,7 @@ const Filters = () => {
   return (
     <div>
       <Nav>
-        <Link
-          className="icon-TipoFlechaAtras"
-          to="/cities/valencia/houses"
-        ></Link>
+        <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
         <span className="filterPageTitle">FILTROS</span>
         <span className="icon-TipoMenuHamb falseClick"></span>
       </Nav>

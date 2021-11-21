@@ -20,10 +20,7 @@ const Houses = () => {
     <div>
       <Header>
         <Nav>
-          <Link
-            className="icon-TipoFlechaAtras"
-            onClick={history.goBack}
-          ></Link>
+          <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
           <Searcher />
           <span className="icon-TipoMenuHamb falseClick"></span>
         </Nav>

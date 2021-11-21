@@ -6,17 +6,19 @@ import imgMalaga from "../../static/Malaga.jpg";
 import imgMallorca from "../../static/Mallorca.jpg";
 import imgValencia from "../../static/FONDO-VALENCIA.jpg";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 // import ComboBox from "../../Components/ComboBox";
 import Nav from "Components/Nav";
 import Searcher from "Components/Searcher";
 
 const Cities = () => {
+  const history = useHistory();
+
   return (
     <section>
       <header className="headerCities">
         <Nav>
-          <Link className="icon-TipoFlechaAtras"></Link>
+          <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
           <Searcher />
           <Link className="icon-TipoMenuHamb"></Link>
         </Nav>

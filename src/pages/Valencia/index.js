@@ -19,10 +19,7 @@ const Valencia = () => {
       <div>
         <Header>
           <Nav>
-            <Link
-              className="icon-TipoFlechaAtras"
-              onClick={history.goBack}
-            ></Link>
+            <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
             <Searcher />
             <Link className="icon-TipoMenuHamb"></Link>
           </Nav>

@@ -10,10 +10,7 @@ const Detail = () => {
     <div>
       <Header>
         <Nav>
-          <Link
-            className="icon-TipoFlechaAtras"
-            onClick={history.goBack}
-          ></Link>
+          <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
           <Link className="icon-TipoMenuHamb"></Link>
         </Nav>
       </Header>
