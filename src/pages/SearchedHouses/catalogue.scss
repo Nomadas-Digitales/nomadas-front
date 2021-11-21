@@ -11,7 +11,7 @@
   margin-left: 1.25rem;
   margin-right: 1.25rem;
   .roomsLink,
-  .housesLink {
+  .housesButton {
     background-color: white;
     padding: 0.5rem;
     border: 1px solid $nomadas-green;
@@ -21,7 +21,7 @@
     font-size: 1.125rem;
     font-family: CirceRoundedRegular;
   }
-  .housesLink {
+  .housesButton {
     border-bottom-left-radius: 1rem;
     border-top-left-radius: 1rem;
     background-color: $nomadas-green;

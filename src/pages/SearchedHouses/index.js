@@ -29,7 +29,7 @@ const SearchedHouse = () => {
         </Nav>
       </Header>
       <div className="houseRoomContainer">
-        <span className="housesLink falseClick">Viviendas</span>
+        <span className="housesButton falseClick">Viviendas</span>
 
         <span className="roomsLink falseClick">Habitaciones</span>
       </div>

@@ -1,119 +1,127 @@
 @import "../../style/base";
 @import "../../style/text";
+@import "../../style/icons";
 
-.contenedorPrincipal {
+.headerCities {
+  @include header(13.181rem);
+  @include headerBackgroundImg("FONDO-CIUDADES.jpg");
+}
+
+.headerCities h1 {
+  font-family: CirceRoundedBold;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  text-align: center;
+  letter-spacing: -0.001rem;
+  color: #1a535c;
+}
+
+.headerCities button {
+  border-radius: 1rem;
+  width: 12rem;
+  height: 2.625rem;
+  margin-left: 5.25rem;
+  font-family: CirceRoundedRegular;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #1a535c;
+  border: 1px solid #1a535c;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.mainCities {
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.contenedorFila {
+
+.sectionCity {
   display: flex;
   flex-direction: row;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 2rem;
-  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  height: 6.5rem;
 }
 
-.contenedorFila:first-child {
-  margin-top: 3rem;
+.sectionCity:first-child {
+  margin-top: 2rem;
 }
 
-.contenedorFila img {
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-.contenedorFila a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-  color: black;
+.contentImg {
+  width: 50%;
+  height: 6.5rem;
 }
 
-.contenedorTextos {
+.sectionCity img {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.contentText {
   margin-left: 1rem;
+  width: 50%;
+  height: 6.5rem;
 }
-.contenedorIconos {
+
+.contentTextHeader {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: baseline;
+  overflow: hidden;
+  margin: 0;
 }
 
-.headerCity {
-  @include header(15rem);
+.contentTextHeader h2 {
+  font-family: CirceRoundedBold;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: -0.022em;
+  color: #000000;
+  margin: 0;
 }
 
-.navContainer {
-  flex-direction: column;
+.contentTextHeader span {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
 }
 
-.housesButton1 {
-  @extend %buttonStyle;
-  border: transparent;
-  color: $color-white;
-  height: 3rem;
-  width: 10rem;
+.contentText p {
+  font-family: CirceRoundedRegular;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: -0.022em;
+  color: #000000;
+  margin: 0;
 }
 
-.searchContainer1 {
-  @extend %buttonStyle;
-  margin-bottom: 2rem;
-  // margin-right: 0 rem;
-  // width: 18rem;
+.contentIcons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
 }
 
-.searchInput {
-  width: 15rem;
+.contentIcons p {
+  font-family: CirceRoundedRegular;
+  font-size: 0.75rem;
+  line-height: 0.938rem;
+  letter-spacing: -0.022em;
+  color: #000000;
 }
 
-// main {
-//     display: flex;
-//     flex-direction: column;
-//     // justify-content: flex-start;
-//     align-items: center;
-// }
+.contentIconFirst {
+  display: flex;
+  align-items: center;
+}
 
-// .city {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-start;
-//     box-shadow: 1px 1px 1px #444444;
-//     align-items: center;
-//     border-radius: 1rem;
-//     width: 50%;
-//     margin: 3rem;
-//     box-sizing: border-box;
-//     // justify-content: space-around
-//     // justify-content: flex-start;
-// }
-
-// // img {
-// //     // width: 6rem;
-// //     // border-radius: 1rem;
-
-// // //   height: auto;
-// // }
-
-// ul {
-//     margin: 0;
-//     padding: 0;
-// }
-
-// .col1 {
-//     padding-right: 2rem;
-//     width: 50%;
-//     // background-image: url(https://images.adsttc.com/media/images/5ec7/e38f/b357/6579/0d00/00ce/newsletter/bionyl-1.jpg?1590158218);
-// }
-
-// // h2 {
-// //     margin: 0;
-// //     padding: 0;
-// // }
-
-// // li div {
-// //     padding-top:1rem;
-// //     padding-left: .5rem;
-// //     max-height: 7rem;
-// //     max-width: 10rem;
-// // }
+.contentIconSecond {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}

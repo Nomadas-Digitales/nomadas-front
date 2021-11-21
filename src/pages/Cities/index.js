@@ -1,82 +1,198 @@
 import "./cities.scss";
+import imgBarcelona from "../../static/Barcelona.jpg";
+import imgAsturias from "../../static/Asturias.jpg";
+import imgCadiz from "../../static/Cadiz.jpg";
+import imgMalaga from "../../static/Malaga.jpg";
+import imgMallorca from "../../static/Mallorca.jpg";
+import imgValencia from "../../static/FONDO-VALENCIA.jpg";
+
 import { Link } from "react-router-dom";
-import ComboBox from "../../Components/ComboBox";
+// import ComboBox from "../../Components/ComboBox";
+import Nav from "Components/Nav";
+import Searcher from "Components/Searcher";
+
 const Cities = () => {
   return (
     <section>
-      <section className="headerCity">
-        <section className="navContainer">
-          <div className="searchContainer1">
-            <ComboBox className="searchInput" />
-            <input type="text" className="searchInput" placeholder="Buscar" />
-          </div>
-          <p>¿AÚN NO HAS DECIDIDO?</p>
-          <Link className="link">
-            <button className="housesButton1">
-              ¡TE <br />
-              ACONSEJAMOS!
-            </button>
-          </Link>
-        </section>
-      </section>
+      <header className="headerCities">
+        <Nav>
+          <Link className="icon-TipoFlechaAtras"></Link>
+          <Searcher />
+          <Link className="icon-TipoMenuHamb"></Link>
+        </Nav>
+        <h1>¿AÚN NO TE HAS DECIDO?</h1>
+        <button>¡Te aconsejamos!</button>
+      </header>
 
-      <div class="contenedorPrincipal">
-        <div class="contenedorFila">
-          <img
-            src="https://images.adsttc.com/media/images/5ec7/e38f/b357/6579/0d00/00ce/newsletter/bionyl-1.jpg?1590158218"
-            alt="foto"
-            width="150"
-            height="170"
-          />
-          <div class="contenedorTextos">
+      <main class="mainCities">
+        <section class="sectionCity">
+          <div className="contentImg">
             <Link to="/cities/valencia">
-              <p>Valencia</p>
-              <p>1.254 Viviendas</p>
-              <p>2184€/mes</p>
-              <div class="contenedorIconos">
-                <p>un icono</p>
-                <p>el otro</p>
-              </div>
+              <img src={imgValencia} alt="foto" />
             </Link>
           </div>
-        </div>
-        <div class="contenedorFila">
-          <img
-            src="https://images.adsttc.com/media/images/5ec7/e38f/b357/6579/0d00/00ce/newsletter/bionyl-1.jpg?1590158218"
-            alt="foto"
-            width="150"
-            height="170"
-          />
-          <div class="contenedorTextos">
-            <Link to="/cities/valencia">
-              <p>Valencia</p>
-              <p>1.254 Viviendas</p>
-              <p>2184€/mes</p>
-              <div class="contenedorIconos">
-                <p>un icono</p>
-                <p>el otro</p>
+          <div class="contentText">
+            <div class="contentTextHeader">
+              <Link to="/cities/valencia">
+                <h2>VALENCIA</h2>
+              </Link>
+              <span className="icon-TipoCorazon"></span>
+            </div>
+            <p>1.245 Vivienda</p>
+            <p>2.184€/mes</p>
+            <div class="contentIcons">
+              <div class="contentIconFirst">
+                <p>4,60</p>
+                <span class="icon-Tipofavoritos"></span>
               </div>
-            </Link>
-          </div>
-        </div>
-        <div class="contenedorFila">
-          <img
-            src="https://images.adsttc.com/media/images/5ec7/e38f/b357/6579/0d00/00ce/newsletter/bionyl-1.jpg?1590158218"
-            alt="foto"
-            width="150"
-            height="170"
-          />
-          <div class="contenedorTextos">
-            <p>Valencia</p>
-            <p>1.254 Viviendas</p>
-            <p>2184€/mes</p>
-            <div class="contenedorIconos">
-              <p>un icono</p>
-              <p>el otro</p>
+              <div class="contentIconSecond">
+                <p>34Mpbs</p>
+                <span class="icon-TipoWIFI"></span>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+
+        <section class="sectionCity">
+          <div className="contentImg">
+            <Link>
+              <img src={imgCadiz} alt="foto" />
+            </Link>
+          </div>
+          <div class="contentText">
+            <div class="contentTextHeader">
+              <Link>
+                <h2>CÁDIZ</h2>
+              </Link>
+              <span className="icon-TipoCorazon"></span>
+            </div>
+            <p>1.245 Vivienda</p>
+            <p>2.184€/mes</p>
+            <div class="contentIcons">
+              <div class="contentIconFirst">
+                <p>4,60</p>
+                <span class="icon-Tipofavoritos"></span>
+              </div>
+              <div class="contentIconSecond">
+                <p>34Mpbs</p>
+                <span class="icon-TipoWIFI"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sectionCity">
+          <div className="contentImg">
+            <Link>
+              <img src={imgMalaga} alt="foto" />
+            </Link>
+          </div>
+          <div class="contentText">
+            <div class="contentTextHeader">
+              <Link>
+                <h2>MÁLAGA</h2>
+              </Link>
+              <span className="icon-TipoCorazon"></span>
+            </div>
+            <p>1.245 Vivienda</p>
+            <p>2.184€/mes</p>
+            <div class="contentIcons">
+              <div class="contentIconFirst">
+                <p>4,60</p>
+                <span class="icon-Tipofavoritos"></span>
+              </div>
+              <div class="contentIconSecond">
+                <p>34Mpbs</p>
+                <span class="icon-TipoWIFI"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sectionCity">
+          <div className="contentImg">
+            <Link>
+              <img src={imgAsturias} alt="foto" />
+            </Link>
+          </div>
+          <div class="contentText">
+            <div class="contentTextHeader">
+              <Link>
+                <h2>OVIEDO</h2>
+              </Link>
+              <span className="icon-TipoCorazon"></span>
+            </div>
+            <p>1.245 Vivienda</p>
+            <p>2.184€/mes</p>
+            <div class="contentIcons">
+              <div class="contentIconFirst">
+                <p>4,60</p>
+                <span class="icon-Tipofavoritos"></span>
+              </div>
+              <div class="contentIconSecond">
+                <p>34Mpbs</p>
+                <span class="icon-TipoWIFI"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sectionCity">
+          <div className="contentImg">
+            <Link>
+              <img src={imgMallorca} alt="foto" />
+            </Link>
+          </div>
+          <div class="contentText">
+            <div class="contentTextHeader">
+              <Link>
+                <h2>MALLORCA</h2>
+              </Link>
+              <span className="icon-TipoCorazon"></span>
+            </div>
+            <p>1.245 Vivienda</p>
+            <p>2.184€/mes</p>
+            <div class="contentIcons">
+              <div class="contentIconFirst">
+                <p>4,60</p>
+                <span class="icon-Tipofavoritos"></span>
+              </div>
+              <div class="contentIconSecond">
+                <p>34Mpbs</p>
+                <span class="icon-TipoWIFI"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sectionCity">
+          <div className="contentImg">
+            <Link>
+              <img src={imgBarcelona} alt="foto" />
+            </Link>
+          </div>
+          <div class="contentText">
+            <div class="contentTextHeader">
+              <Link>
+                <h2>BARCELONA</h2>
+              </Link>
+              <span className="icon-TipoCorazon"></span>
+            </div>
+            <p>1.245 Vivienda</p>
+            <p>2.184€/mes</p>
+            <div class="contentIcons">
+              <div class="contentIconFirst">
+                <p>4,60</p>
+                <span class="icon-Tipofavoritos"></span>
+              </div>
+              <div class="contentIconSecond">
+                <p>34Mpbs</p>
+                <span class="icon-TipoWIFI"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </section>
   );
 };
