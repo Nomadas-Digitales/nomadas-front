@@ -24,6 +24,13 @@ const Valencia = () => {
             <Link className="icon-TipoMenuHamb"></Link>
           </Nav>
         </Header>
+        <div className="houseRoomContainer">
+          <Link className="housesLink falseClick" to="/cities/valencia/houses">
+            Viviendas
+          </Link>
+
+          <span className="roomsLink falseClick">Habitaciones</span>
+        </div>
         <CityDetail />
         <h2>VIVIENDAS</h2>
         <section className="housesList">
@@ -31,10 +38,19 @@ const Valencia = () => {
             if (i < 4) {
               return (
                 <div className="houseDetail">
-                  <img src={house.thumbnail} alt={house.address} />
+                  <Link
+                    to={`/cities/valencia/houses/detail/${house.propertycode}`}
+                  >
+                    <img src={house.thumbnail} alt={house.address} />
+                  </Link>
                   <div className="houseDetailDescription">
                     <div className="houseDetailText">
-                      <h3>{house.address}</h3>
+                      <Link
+                        to={`/cities/valencia/houses/detail/${house.propertycode}`}
+                      >
+                        <h3>{house.address}</h3>
+                      </Link>
+
                       <p>{house.price}€/mes</p>
                       <div className="houseDetailTextIcon">
                         <p>{house.score}</p>

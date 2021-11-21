@@ -33,12 +33,12 @@
 }
 
 h2 {
-font-family: CirceRoundedBold;
-font-size: 1.5rem;
-line-height: 1.938rem;
-letter-spacing: -0.022em;
-color: #1A535C;
-padding-left: 1.6rem;
+  font-family: CirceRoundedBold;
+  font-size: 1.5rem;
+  line-height: 1.938rem;
+  letter-spacing: -0.022em;
+  color: #1a535c;
+  padding-left: 1.6rem;
 }
 
 .housesList {
@@ -87,17 +87,17 @@ padding-left: 1.6rem;
   }
 }
 
-.houseDetailDescription{
+.houseDetailDescription {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.houseDetailText{
+.houseDetailText {
   width: 60%;
 }
 
-.houseDetailIcon{
+.houseDetailIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +107,7 @@ padding-left: 1.6rem;
   }
 }
 
-.houseDetailTextIcon{
+.houseDetailTextIcon {
   display: flex;
   justify-content: flex-start;
   align-items: center;
