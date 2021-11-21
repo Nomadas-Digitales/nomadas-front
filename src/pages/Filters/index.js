@@ -7,7 +7,7 @@ import "./filters.scss";
 import { useContext } from "react";
 
 const Filters = () => {
-  const { updateFilterValues } = useContext(context);
+  const { filterValues, updateFilterValues } = useContext(context);
   const history = useHistory();
 
   const prices = [
@@ -63,7 +63,12 @@ const Filters = () => {
         <div className="distanceCenterFP">
           <p className="filterTitles">Distancia max. al centro</p>
           <div className="slideAndMeasure">
-            <Slider handler={updateFilterValues} max="15" name="distance" />
+            <Slider
+              handler={updateFilterValues}
+              max="15"
+              name="distance"
+              inputValue={filterValues.distance}
+            />
             <p className="measureFilters">km</p>
           </div>
         </div>
@@ -74,6 +79,7 @@ const Filters = () => {
               name="priceMin"
               className="min"
               onChange={updateFilterValues}
+              value={filterValues.priceMin}
             >
               <option hidden selected>
                 Min.
@@ -86,6 +92,7 @@ const Filters = () => {
               name="priceMax"
               className="max"
               onChange={updateFilterValues}
+              value={filterValues.priceMax}
             >
               <option hidden selected>
                 Max.
@@ -100,9 +107,10 @@ const Filters = () => {
           <p className="filterTitles">Tamaño</p>
           <div className="dropDown">
             <select
-              name="priceMin"
+              name="sizeMin"
               className="min"
               onChange={updateFilterValues}
+              value={filterValues.sizeMin}
             >
               <option hidden selected>
                 Min.
@@ -112,9 +120,10 @@ const Filters = () => {
               })}
             </select>
             <select
-              name="priceMax"
+              name="sizeMax"
               className="max"
               onChange={updateFilterValues}
+              value={filterValues.sizeMax}
             >
               <option hidden selected>
                 Max.
@@ -128,7 +137,12 @@ const Filters = () => {
         <div className="internetFP">
           <p className="filterTitles">Internet</p>
           <div className="slideAndMeasure">
-            <Slider handler={updateFilterValues} max="800" name="internet" />
+            <Slider
+              handler={updateFilterValues}
+              max="800"
+              name="internet"
+              inputValue={filterValues.internet}
+            />
             <p className="measureFilters">Mbps</p>
           </div>
         </div>
@@ -139,6 +153,7 @@ const Filters = () => {
               handler={updateFilterValues}
               max="15"
               name="distanceBeach"
+              inputValue={filterValues.distanceBeach}
             />
             <p className="measureFilters">km</p>
           </div>
@@ -150,6 +165,7 @@ const Filters = () => {
               handler={updateFilterValues}
               max="15"
               name="distanceCoworking"
+              inputValue={filterValues.distanceCoworking}
             />
             <p className="measureFilters">km</p>
           </div>
