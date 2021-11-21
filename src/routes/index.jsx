@@ -1,11 +1,10 @@
 import Home from "../pages/Home";
-import AllHouses from "../pages/AllHouses";
+import Houses from "../pages/Houses";
 import Cities from "../pages/Cities";
 import Detail from "../pages/Detail";
 import Filters from "../pages/Filters";
 import InterFavorites from "../pages/InterFavorites";
 import Login from "../pages/Login";
-import SearchedHouses from "../pages/SearchedHouses";
 import Valencia from "../pages/Valencia";
 
 export default [
@@ -26,17 +25,12 @@ export default [
   },
   {
     path: "/cities/valencia/houses",
-    component: AllHouses,
+    component: Houses,
     exact: true,
   },
   {
     path: "/cities/valencia/houses/filters",
     component: Filters,
-    exact: true,
-  },
-  {
-    path: "/cities/valencia/searchedhouses",
-    component: SearchedHouses,
     exact: true,
   },
   {

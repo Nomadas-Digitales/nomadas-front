@@ -6,10 +6,10 @@ import HouseCard from "Components/HouseCard";
 import Header from "Components/Header";
 import Nav from "Components/Nav";
 import Searcher from "Components/Searcher";
-import "./catalogue.scss";
+import "./houses.scss";
 import context from "store/context";
 
-const SearchedHouse = () => {
+const Houses = () => {
   const { filterValues } = useContext(context);
   console.log("filterValues", filterValues);
   const history = useHistory();
@@ -58,4 +58,4 @@ const SearchedHouse = () => {
   );
 };
 
-export default SearchedHouse;
+export default Houses;
