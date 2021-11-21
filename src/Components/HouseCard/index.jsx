@@ -14,7 +14,9 @@ const HouseCard = ({
   return (
     <div className="homeContainer">
       <div className="homeImg">
-        <img className="img" src={thumbnail} />
+        <Link to={`/cities/valencia/houses/detail/${propertycode}`}>
+          <img className="img" src={thumbnail} />
+        </Link>
       </div>
       <div className="homeInfo">
         <div className="titleContainer">
