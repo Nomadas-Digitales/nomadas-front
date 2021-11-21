@@ -6,32 +6,20 @@ const useFetchFilteredHouses = (filters) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const results = await houses.getByFilters(
-        filters.distance,
-        filters.priceMin,
-        filters.priceMax,
-        filters.distanceBeach,
-        filters.internet
-      );
-      console.log("resultsOfFetch", results);
+      const results = await houses.getByFilters(filters);
       setFilteredHouses(results.data);
-      console.log("fileteredHouses", filteredHouses);
     };
     fetchData();
   }, []);
   return filteredHouses;
 };
 
-/**Lo mío */
-
 const useFetchAllHouses = (id) => {
   const [allHouses, setAllHouses] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const results = await houses.getAllHouses(
-        id,
-      );
+      const results = await houses.getAllHouses(id);
       console.log("resultsOfFetch", results);
       setAllHouses(results.data);
     };
@@ -40,4 +28,4 @@ const useFetchAllHouses = (id) => {
   return allHouses;
 };
 
-export  {useFetchFilteredHouses, useFetchAllHouses};
+export { useFetchFilteredHouses, useFetchAllHouses };

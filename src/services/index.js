@@ -20,6 +20,4 @@ const houses = {
   getAllHouses: getAllHouses(client),
 };
 
-
-
-export { auth, houses};
+export { auth, houses };

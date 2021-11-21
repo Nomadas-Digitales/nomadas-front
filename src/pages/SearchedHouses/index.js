@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useFetchFilteredHouses } from "hooks/useFetchFilteredHouses";
 
@@ -7,33 +7,14 @@ import Header from "Components/Header";
 import Nav from "Components/Nav";
 import Searcher from "Components/Searcher";
 import "./catalogue.scss";
+import context from "store/context";
 
 const SearchedHouse = () => {
-  const [filters, setFilters] = useState({
-    distance: "",
-    priceMin: "",
-    priceMax: "",
-    distanceBeach: "",
-    internet: "",
-  });
-
+  const { filterValues } = useContext(context);
+  console.log("filterValues", filterValues);
   const history = useHistory();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFilters((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const houses = useFetchFilteredHouses({
-    distance: "",
-    priceMin: "",
-    priceMax: "",
-    distanceBeach: "",
-    internet: "",
-  });
+  const houses = useFetchFilteredHouses(filterValues);
 
   return (
     <div>
