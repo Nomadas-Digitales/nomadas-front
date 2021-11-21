@@ -55,7 +55,10 @@ const Filters = () => {
   return (
     <div>
       <Nav>
-        <Link className="icon-TipoFlechaAtras" onClick={history.goBack}></Link>
+        <Link
+          className="icon-TipoFlechaAtras"
+          to="/cities/valencia/houses"
+        ></Link>
         <span className="filterPageTitle">FILTROS</span>
         <span className="icon-TipoMenuHamb falseClick"></span>
       </Nav>
@@ -171,10 +174,7 @@ const Filters = () => {
           </div>
         </div>
         <div className="showResults">
-          <Link
-            to="/cities/valencia/searchedhouses"
-            className="showResultsLink"
-          >
+          <Link to="/cities/valencia/houses" className="showResultsLink">
             Mostrar resultados
           </Link>
         </div>
