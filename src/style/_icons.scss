@@ -12,7 +12,6 @@
 
 [class^="icon-"],
 [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
@@ -21,7 +20,6 @@
   text-transform: none;
   line-height: 1;
 
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -113,7 +111,6 @@
 .icon-Tipofavoritos:before {
   content: "\e90e";
   color: #ec704f;
-  
 }
 .icon-ActivoTrue1:before {
   content: "\e90e";
@@ -121,7 +118,6 @@
 }
 .icon-TipoFiltros:before {
   content: "\e90f";
-  color: #1a535c;
 }
 .icon-TipoGaraje:before {
   content: "\e911";
@@ -186,7 +182,6 @@
 .icon-TipoWIFI:before {
   content: "\e920";
   color: #ec704f;
-  
 }
 .icon-ActivoTrue5:before {
   content: "\e920";

@@ -47,11 +47,21 @@
     color: #000000;
     display: flex;
     align-items: flex-end;
+    border-radius: 1.5rem;
+    padding: 12px;
     .icon-TipoFiltros,
     .icon-TipoMapa,
     .icon-TipoOrden {
-      color: $nomadas-green;
       font-size: 1.25rem;
+    }
+  }
+  .filters {
+    background-color: $nomadas-green;
+    .icon-TipoFiltros {
+      color: white;
+    }
+    a {
+      color: white;
     }
   }
 }

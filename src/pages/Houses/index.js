@@ -11,10 +11,11 @@ import context from "store/context";
 
 const Houses = () => {
   const { filterValues } = useContext(context);
-  console.log("filterValues", filterValues);
   const history = useHistory();
 
   const houses = useFetchFilteredHouses(filterValues);
+
+  const isFilterEmpty = Object.keys(filterValues).length === 0;
 
   return (
     <div>
@@ -31,11 +32,9 @@ const Houses = () => {
         <span className="roomsLink falseClick">Habitaciones</span>
       </div>
       <section className="filterContainer">
-        <div>
+        <div className={isFilterEmpty ? "" : "filters"}>
           <span className="icon-TipoFiltros"></span>
-          <Link className="filters" to="/cities/valencia/houses/filters">
-            Fitros
-          </Link>
+          <Link to="/cities/valencia/houses/filters">Fitros</Link>
         </div>
         <div>
           <span className="icon-TipoMapa"></span>
