@@ -57,15 +57,15 @@ const Cities = () => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <Link>
+            <span className="falseClick">
               <img src={imgCadiz} alt="foto" />
-            </Link>
+            </span>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <Link>
+              <span className="falseClick">
                 <h2>CÁDIZ</h2>
-              </Link>
+              </span>
               <span className="icon-TipoCorazon"></span>
             </div>
             <p>1.245 Vivienda</p>
@@ -85,15 +85,15 @@ const Cities = () => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <Link>
+            <span className="falseClick">
               <img src={imgMalaga} alt="foto" />
-            </Link>
+            </span>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <Link>
+              <span className="falseClick">
                 <h2>MÁLAGA</h2>
-              </Link>
+              </span>
               <span className="icon-TipoCorazon"></span>
             </div>
             <p>1.245 Vivienda</p>
@@ -113,15 +113,15 @@ const Cities = () => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <Link>
+            <span className="falseClick">
               <img src={imgAsturias} alt="foto" />
-            </Link>
+            </span>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <Link>
+              <span className="falseClick">
                 <h2>OVIEDO</h2>
-              </Link>
+              </span>
               <span className="icon-TipoCorazon"></span>
             </div>
             <p>1.245 Vivienda</p>
@@ -141,15 +141,15 @@ const Cities = () => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <Link>
+            <span className="falseClick">
               <img src={imgMallorca} alt="foto" />
-            </Link>
+            </span>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <Link>
+              <span className="falseClick">
                 <h2>MALLORCA</h2>
-              </Link>
+              </span>
               <span className="icon-TipoCorazon"></span>
             </div>
             <p>1.245 Vivienda</p>
@@ -169,15 +169,15 @@ const Cities = () => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <Link>
+            <span className="falseClick">
               <img src={imgBarcelona} alt="foto" />
-            </Link>
+            </span>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <Link>
+              <span className="falseClick">
                 <h2>BARCELONA</h2>
-              </Link>
+              </span>
               <span className="icon-TipoCorazon"></span>
             </div>
             <p>1.245 Vivienda</p>
