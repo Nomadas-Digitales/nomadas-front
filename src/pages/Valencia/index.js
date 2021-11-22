@@ -21,7 +21,7 @@ const Valencia = () => {
           <Nav>
             <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
             <Searcher />
-            <Link className="icon-TipoMenuHamb"></Link>
+            <span className="icon-TipoMenuHamb falseClick"></span>
           </Nav>
         </Header>
         <div className="houseRoomContainer">

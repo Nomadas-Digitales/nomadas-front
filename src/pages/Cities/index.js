@@ -20,7 +20,7 @@ const Cities = () => {
         <Nav>
           <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
           <Searcher />
-          <Link className="icon-TipoMenuHamb"></Link>
+          <span className="icon-TipoMenuHamb falseClick"></span>
         </Nav>
         <h1>¿AÚN NO TE HAS DECIDO?</h1>
         <button>¡Te aconsejamos!</button>
