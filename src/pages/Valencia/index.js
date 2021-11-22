@@ -39,14 +39,14 @@ const Valencia = () => {
               return (
                 <div className="houseDetail">
                   <Link
-                    to={`/cities/valencia/houses/detail/${house.propertycode}`}
+                    to={`/cities/valencia/houses/detail?propertycode=${house.propertycode}`}
                   >
                     <img src={house.thumbnail} alt={house.address} />
                   </Link>
                   <div className="houseDetailDescription">
                     <div className="houseDetailText">
                       <Link
-                        to={`/cities/valencia/houses/detail/${house.propertycode}`}
+                        to={`/cities/valencia/houses/detail?propertycode=${house.propertycode}`}
                       >
                         <h3>{house.address}</h3>
                       </Link>
