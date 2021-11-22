@@ -72,10 +72,14 @@ const Valencia = () => {
             if (i > 4 && i < 9) {
               return (
                 <div className="houseDetail">
-                  <img src={house.thumbnail} alt={house.address} />
+                  <img
+                    src={house.thumbnail}
+                    alt={house.address}
+                    className="falseClick"
+                  />
                   <div className="houseDetailDescription">
                     <div className="houseDetailText">
-                      <h3>{house.address}</h3>
+                      <h3 className="falseClick">{house.address}</h3>
                       <p>{house.price}€/mes</p>
                       <div className="houseDetailTextIcon">
                         <p>{house.score}</p>
