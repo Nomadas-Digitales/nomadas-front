@@ -1,6 +1,10 @@
 const getByFilters = ({ get }) => async (filters) => {
   const queryFilters = Object.keys(filters).map((key) => {
-    if (key === "distance" || key === "distanceBeach") {
+    if (
+      key === "distance" ||
+      key === "distanceBeach" ||
+      key === "distanceCoworking"
+    ) {
       return `${key}=${filters[key] * 1000}`;
     }
     return `${key}=${filters[key]}`;
