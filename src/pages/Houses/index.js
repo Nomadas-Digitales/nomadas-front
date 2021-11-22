@@ -45,11 +45,15 @@ const Houses = () => {
           <span className="order falseClick">Ordenar</span>
         </div>
       </section>
-      <section className="catalogueContainer">
-        {houses.map((house, i) => {
-          return <HouseCard key={i} {...house} />;
-        })}
-      </section>
+      {houses.length !== 0 ? (
+        <section className="catalogueContainer">
+          {houses.map((house, i) => {
+            return <HouseCard key={i} {...house} />;
+          })}
+        </section>
+      ) : (
+        <p className="notFoundMessage">No se han encontrado resultados</p>
+      )}
     </div>
   );
 };
