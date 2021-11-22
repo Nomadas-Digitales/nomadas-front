@@ -4,6 +4,9 @@ import Header from "Components/Header";
 import Nav from "Components/Nav";
 
 const Detail = () => {
+  const url = new URLSearchParams(window.location.search);
+  const propertycode = url.get("propertycode");
+
   const history = useHistory();
 
   return (
