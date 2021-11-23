@@ -24,14 +24,6 @@
   margin-bottom: 0.7rem;
 }
 
-.footer {
-  height: 50px;
-  color: red;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
 .extraInfo {
   display: flex;
   justify-content: space-around;
@@ -84,4 +76,51 @@
   justify-content: space-evenly;
   overflow: hidden;
   margin-top: 1rem;
+}
+
+.footer {
+  height: 50px;
+  color: red;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerIconContainer {
+  background-color: $nomadas-green;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-TipoCorazonAzul {
+  font-size: 2rem;
+}
+
+.icon-TipoMapaBlanco {
+  font-size: 1.5rem;
+}
+
+.footerContantContainer {
+  background-color: $nomadas-green;
+  height: 2.5rem;
+  width: 12rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+}
+.contact {
+  color: #ffffff;
+  font-family: CirceRoundedRegular;
+  font-size: 1.125rem;
+  vertical-align: center;
+  letter-spacing: -2.2%;
+  margin-left: 1rem;
 }

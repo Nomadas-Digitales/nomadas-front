@@ -233,7 +233,18 @@ const Detail = () => {
           </p>
         )}
       </div>
-      <div className="footer">footer</div>
+      <div className="footer">
+        <div className="footerIconContainer">
+          <span className="icon-TipoCorazonAzul"></span>
+        </div>
+        <div className="footerIconContainer">
+          <span className="icon-TipoMapaBlanco"></span>
+        </div>
+        <div className="footerContantContainer">
+          <span className="icon-TipoMapaBlanco"></span>
+          <p className="contact">Contactar</p>
+        </div>
+      </div>
     </div>
   );
 };
