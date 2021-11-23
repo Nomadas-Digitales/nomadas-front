@@ -27,4 +27,22 @@ const getAllHouses = ({ get }) => async (id) => {
   }
 };
 
-export { getAllHouses, getByFilters };
+const getHouse = ({ get }) => async (id) => {
+  try {
+    return (await get(`/house/list/home?id=${id}`)).data;
+  } catch (error) {
+    console.info("Cannot get products");
+    return false;
+  }
+};
+
+const getHousesByPrice = ({ get }) => async (price) => {
+  try {
+    return (await get(`/house/list/by_price?price=${price}`)).data;
+  } catch (error) {
+    console.info("Cannot get products");
+    return false;
+  }
+};
+
+export { getAllHouses, getByFilters, getHouse, getHousesByPrice };

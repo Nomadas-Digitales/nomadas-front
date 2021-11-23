@@ -1,7 +1,12 @@
 import axios from "axios";
 
 import { login, register } from "./auth";
-import { getByFilters, getAllHouses } from "./houses";
+import {
+  getByFilters,
+  getAllHouses,
+  getHouse,
+  getHousesByPrice,
+} from "./houses";
 
 const client = axios.create({
   baseURL: process.env.REACT_APP_BACK_URL,
@@ -18,6 +23,8 @@ const auth = {
 const houses = {
   getByFilters: getByFilters(client),
   getAllHouses: getAllHouses(client),
+  getHouse: getHouse(client),
+  getHousesByPrice: getHousesByPrice(client),
 };
 
 export { auth, houses };

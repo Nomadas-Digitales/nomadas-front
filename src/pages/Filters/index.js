@@ -10,7 +10,6 @@ import { useContext } from "react";
 const Filters = () => {
   const { filterValues, updateFilterValues } = useContext(context);
   const history = useHistory();
-  console.log("filterValues", filterValues);
 
   const sizes = [
     { value: 20, label: "20" },
