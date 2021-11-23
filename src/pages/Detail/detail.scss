@@ -1,0 +1,87 @@
+@import "../../style/base";
+
+.detailHeader {
+  position: relative;
+}
+
+.principalImg {
+  height: 13.181rem;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.detailPageTitleContaines {
+  margin-top: 11rem;
+}
+
+.detailPageTitle {
+  font-family: CirceRoundedBold;
+  font-size: 2.25rem;
+  margin-bottom: 0.7rem;
+}
+
+.footer {
+  height: 50px;
+  color: red;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.extraInfo {
+  display: flex;
+  justify-content: space-around;
+  .detail {
+    align-items: center;
+  }
+}
+
+.detailDetail {
+  display: flex;
+  flex-direction: row;
+  .detail {
+    align-items: center;
+  }
+}
+
+.detailPageDescription {
+  h2 {
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-left: 1.75rem;
+    margin-right: 2.25rem;
+    font-family: CirceRoundedRegular;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: -2.2%;
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+}
+
+.extraInfo {
+  p {
+    margin-right: 2px;
+  }
+}
+
+.imgGalery {
+  width: 10rem;
+  height: 8rem;
+}
+.staticImg {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.galeryLine {
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  margin-top: 1rem;
+}
