@@ -13,6 +13,7 @@ const Valencia = () => {
 
   const id = 1;
   const { result } = userFetchAllHouse(id);
+  // const houses = userFetchAllHouse(id);
   console.log(result);
   if (result) {
     return (
