@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import "./login.scss";
 
-import fondo from "../../static/fondo-inicio-sesión.png";
+import fondo from "../../static/Fondo-Inicio-Sesion.png";
 
 const Login = () => {
   const history = useHistory();
