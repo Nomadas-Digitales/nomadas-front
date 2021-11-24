@@ -3,7 +3,6 @@ import { Link, useHistory } from "react-router-dom";
 import Nav from "Components/Nav";
 import HouseCard from "Components/HouseCard";
 import useFetchOneHouse from "hooks/useFetchOneHouse";
-import useFetchSimilarHouses from "hooks/useFetchSimilarHouses";
 import img1 from "../../static/1.jpg";
 import img2 from "../../static/2.jpg";
 import img3 from "../../static/3.jpg";
@@ -16,10 +15,7 @@ const Detail = () => {
   const url = new URLSearchParams(window.location.search);
   const propertycode = url.get("propertycode");
 
-  const house = useFetchOneHouse(propertycode);
-
-  const similarHouses = useFetchSimilarHouses(house.price);
-  console.log("sims", similarHouses);
+  const { house, similars } = useFetchOneHouse(propertycode);
 
   const history = useHistory();
 
@@ -221,11 +217,13 @@ const Detail = () => {
       </div>
       <div>
         <h2>Viviendas similares</h2>
-        {similarHouses !== undefined ? (
+        {similars !== undefined ? (
           <section className="catalogueContainer">
-            {similarHouses.map((house, i) => {
-              return <HouseCard key={i} {...house} />;
-            })}
+            {similars
+              .filter((home) => home.propertycode !== house.propertycode)
+              .map((house, i) => {
+                return <HouseCard key={i} {...house} />;
+              })}
           </section>
         ) : (
           <p className="notFoundMessage">
