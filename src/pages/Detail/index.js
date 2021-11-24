@@ -215,7 +215,7 @@ const Detail = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="similarHousesFrame">
         <h2>Viviendas similares</h2>
         {similars !== undefined ? (
           <section className="catalogueContainer">

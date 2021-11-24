@@ -86,6 +86,8 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  background-color: white;
+  padding-top: 1rem;
 }
 
 .footerIconContainer {
@@ -124,4 +126,8 @@
   vertical-align: center;
   letter-spacing: -2.2%;
   margin-left: 1rem;
+}
+
+.similarHousesFrame {
+  margin-bottom: 5rem;
 }
