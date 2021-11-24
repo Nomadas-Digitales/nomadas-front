@@ -1,7 +1,7 @@
 @import "../../style/base";
 
 .filterPageTitle {
-  width: 15.5rem;
+  width: 9rem;
   font-family: CirceRoundedBold;
   font-size: 18px;
   line-height: 23px;
@@ -118,4 +118,24 @@ div.select__input-container {
   a {
     color: #ffffff;
   }
+}
+.deleteFilters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input:focus {
+    outline: none;
+  }
+}
+
+.deleteFiltersText {
+  background-color: transparent;
+  font-family: CirceRoundedRegular;
+  font-size: 1rem;
+  color: $nomadas-green;
+  margin-left: 3px;
+  padding: 0;
+  text-decoration: underline $nomadas-green solid;
+  border-style: none;
+  width: 6rem;
 }

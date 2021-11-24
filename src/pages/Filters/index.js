@@ -1,14 +1,15 @@
 import { Link, useHistory } from "react-router-dom";
+import { useContext, useState } from "react";
 import context from "store/context";
 
 import Nav from "Components/Nav";
 import Slider from "Components/Slider";
 import Select from "react-select";
 import "./filters.scss";
-import { useContext } from "react";
 
 const Filters = () => {
   const { filterValues, updateFilterValues } = useContext(context);
+  const [filterState, setFilterState] = useState(filterValues);
   const history = useHistory();
 
   const sizes = [
@@ -46,12 +47,23 @@ const Filters = () => {
     { value: 1900, label: "1900" },
     { value: 2000, label: "2000" },
   ];
+
+  console.log("fiter", filterValues);
+  const clearFilter = () => {
+    window.location.reload();
+  };
+
   return (
     <div>
       <Nav>
         <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
         <span className="filterPageTitle">FILTROS</span>
-        <span className="icon-TipoMenuHamb falseClick"></span>
+        <div className="deleteFilters">
+          <span className="icon-TipoRadiador"></span>{" "}
+          <button className="deleteFiltersText" onClick={clearFilter}>
+            Borrar filtros
+          </button>
+        </div>
       </Nav>
       <div>
         <div className="distanceCenterFP">
