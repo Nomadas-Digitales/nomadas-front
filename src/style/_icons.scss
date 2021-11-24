@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?yzbbik");
-  src: url("fonts/icomoon.eot?yzbbik#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?yzbbik") format("truetype"),
-    url("fonts/icomoon.woff?yzbbik") format("woff"),
-    url("fonts/icomoon.svg?yzbbik#icomoon") format("svg");
+  src: url("icons/icomoon.eot?yzbbik");
+  src: url("icons/icomoon.eot?yzbbik#iefix") format("embedded-opentype"),
+    url("icons/icomoon.ttf?yzbbik") format("truetype"),
+    url("icons/icomoon.woff?yzbbik") format("woff"),
+    url("icons/icomoon.svg?yzbbik#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -98,6 +98,11 @@
   content: "\e90a";
   color: #ec704f;
 }
+.icon-TipoCorazonAzul:before {
+  content: "\e90a";
+  color: #ffffff;
+}
+
 .icon-ActivoFalse:before {
   content: "\e90a";
   color: #ec704f;
@@ -149,6 +154,10 @@
 .icon-TipoMapa:before {
   content: "\e914";
   color: #1a535c;
+}
+.icon-TipoMapaBlanco:before {
+  content: "\e914";
+  color: #ffffff;
 }
 .icon-TipoMetros:before {
   content: "\e916";

@@ -241,7 +241,7 @@ const Detail = () => {
           <span className="icon-TipoMapaBlanco"></span>
         </div>
         <div className="footerContantContainer">
-          <span className="icon-TipoMapaBlanco"></span>
+          <span className="icon-TipoTelefono"></span>
           <p className="contact">Contactar</p>
         </div>
       </div>

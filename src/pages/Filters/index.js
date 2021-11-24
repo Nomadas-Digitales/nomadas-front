@@ -67,7 +67,7 @@ const Filters = () => {
         <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
         <span className="filterPageTitle">FILTROS</span>
         <div className="deleteFilters">
-          <span className="icon-TipoRadiador"></span>{" "}
+          <span className="icon-TipoPapelera"></span>{" "}
           <button className="deleteFiltersText" onClick={clearFilter}>
             Borrar filtros
           </button>
