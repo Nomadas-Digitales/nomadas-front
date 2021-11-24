@@ -39,7 +39,7 @@ export default [
     exact: true,
   },
   {
-    path: "/prelogin",
+    path: "/cities/valencia/houses/favorite",
     component: InterFavorites,
     exact: true,
   },

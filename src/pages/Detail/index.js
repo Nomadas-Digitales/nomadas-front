@@ -235,7 +235,9 @@ const Detail = () => {
       </div>
       <div className="footer">
         <div className="footerIconContainer">
-          <span className="icon-TipoCorazonAzul"></span>
+          <Link to="/cities/valencia/houses/favorite">
+            <span className="icon-TipoCorazonAzul"></span>
+          </Link>
         </div>
         <div className="footerIconContainer">
           <span className="icon-TipoMapaBlanco"></span>

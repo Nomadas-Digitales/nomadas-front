@@ -28,7 +28,10 @@ const HouseCard = ({
           >
             {address}
           </Link>
-          <span className="icon-TipoCorazon falseClick"></span>
+          <Link
+            to="/cities/valencia/houses/favorite"
+            className="icon-TipoCorazon"
+          ></Link>
         </div>
 
         <div className="description">
