@@ -223,9 +223,11 @@ const Detail = () => {
         <h2>Viviendas similares</h2>
         {similarHouses !== undefined ? (
           <section className="catalogueContainer">
-            {similarHouses.map((house, i) => {
-              return <HouseCard key={i} {...house} />;
-            })}
+            {similarHouses
+              .filter((home) => home.propertycode !== house.propertycode)
+              .map((house, i) => {
+                return <HouseCard key={i} {...house} />;
+              })}
           </section>
         ) : (
           <p className="notFoundMessage">
