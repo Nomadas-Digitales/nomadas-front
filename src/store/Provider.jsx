@@ -2,10 +2,12 @@ import context from "./context";
 import { useFilters } from "hooks/useFilters";
 
 const Provider = (props) => {
-  const { filterValues, updateFilterValues } = useFilters();
+  const { filterValues, updateFilterValues, deleteFilters } = useFilters();
 
   return (
-    <context.Provider value={{ filterValues, updateFilterValues }}>
+    <context.Provider
+      value={{ filterValues, updateFilterValues, deleteFilters }}
+    >
       {props.children}
     </context.Provider>
   );

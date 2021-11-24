@@ -7,5 +7,9 @@ export const useFilters = () => {
     setFilterValues((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  return { filterValues, updateFilterValues };
+  const deleteFilters = () => {
+    setFilterValues({});
+  };
+
+  return { filterValues, updateFilterValues, deleteFilters };
 };

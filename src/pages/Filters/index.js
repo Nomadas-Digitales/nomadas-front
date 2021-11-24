@@ -8,7 +8,9 @@ import Select from "react-select";
 import "./filters.scss";
 
 const Filters = () => {
-  const { filterValues, updateFilterValues } = useContext(context);
+  const { filterValues, updateFilterValues, deleteFilters } = useContext(
+    context
+  );
   const [filterState, setFilterState] = useState(filterValues);
   const history = useHistory();
 
@@ -48,9 +50,15 @@ const Filters = () => {
     { value: 2000, label: "2000" },
   ];
 
-  console.log("fiter", filterValues);
   const clearFilter = () => {
-    window.location.reload();
+    deleteFilters();
+    setFilterState(() => ({}));
+  };
+
+  const updateFilters = (value, name) => {
+    updateFilterValues(value, name);
+
+    setFilterState((prevState) => ({ ...prevState, [name]: value }));
   };
 
   return (
@@ -70,10 +78,10 @@ const Filters = () => {
           <p className="filterTitles">Distancia max. al centro</p>
           <div className="slideAndMeasure">
             <Slider
-              handler={(e) => updateFilterValues(e.target.value, e.target.name)}
+              handler={(e) => updateFilters(e.target.value, e.target.name)}
               max="15"
               name="distance"
-              inputValue={filterValues.distance}
+              inputValue={filterState.distance}
             />
             <p className="measureFilters">km</p>
           </div>
@@ -90,12 +98,12 @@ const Filters = () => {
               placeholder="Min."
               name="priceMin"
               onChange={(option, action) =>
-                updateFilterValues(option.value, action.name)
+                updateFilters(option.value, action.name)
               }
-              defaultValue={
-                filterValues.priceMin
+              value={
+                filterState.priceMin
                   ? prices.filter(
-                      (option) => option.value === filterValues.priceMin
+                      (option) => option.value === filterState.priceMin
                     )
                   : ""
               }
@@ -108,12 +116,12 @@ const Filters = () => {
               placeholder="Max."
               name="priceMax"
               onChange={(option, action) =>
-                updateFilterValues(option.value, action.name)
+                updateFilters(option.value, action.name)
               }
-              defaultValue={
-                filterValues.priceMax
+              value={
+                filterState.priceMax
                   ? prices.filter(
-                      (option) => option.value === filterValues.priceMax
+                      (option) => option.value === filterState.priceMax
                     )
                   : ""
               }
@@ -131,12 +139,12 @@ const Filters = () => {
               placeholder="Min."
               name="sizeMin"
               onChange={(option, action) =>
-                updateFilterValues(option.value, action.name)
+                updateFilters(option.value, action.name)
               }
-              defaultValue={
-                filterValues.sizeMin
+              value={
+                filterState.sizeMin
                   ? sizes.filter(
-                      (option) => option.value === filterValues.sizeMin
+                      (option) => option.value === filterState.sizeMin
                     )
                   : ""
               }
@@ -149,12 +157,12 @@ const Filters = () => {
               placeholder="Max."
               name="sizeMax"
               onChange={(option, action) =>
-                updateFilterValues(option.value, action.name)
+                updateFilters(option.value, action.name)
               }
-              defaultValue={
-                filterValues.sizeMax
+              value={
+                filterState.sizeMax
                   ? sizes.filter(
-                      (option) => option.value === filterValues.sizeMax
+                      (option) => option.value === filterState.sizeMax
                     )
                   : ""
               }
@@ -165,10 +173,10 @@ const Filters = () => {
           <p className="filterTitles">Velocidad mínima de internet</p>
           <div className="slideAndMeasure">
             <Slider
-              handler={(e) => updateFilterValues(e.target.value, e.target.name)}
+              handler={(e) => updateFilters(e.target.value, e.target.name)}
               max="800"
               name="internet"
-              inputValue={filterValues.internet}
+              inputValue={filterState.internet}
             />
             <p className="measureFilters">Mbps</p>
           </div>
@@ -177,10 +185,10 @@ const Filters = () => {
           <p className="filterTitles">Distancia a la playa</p>
           <div className="slideAndMeasure">
             <Slider
-              handler={(e) => updateFilterValues(e.target.value, e.target.name)}
+              handler={(e) => updateFilters(e.target.value, e.target.name)}
               max="15"
               name="distanceBeach"
-              inputValue={filterValues.distanceBeach}
+              inputValue={filterState.distanceBeach}
             />
             <p className="measureFilters">km</p>
           </div>
@@ -189,10 +197,10 @@ const Filters = () => {
           <p className="filterTitles">Distancia a Coworking</p>
           <div className="slideAndMeasure">
             <Slider
-              handler={(e) => updateFilterValues(e.target.value, e.target.name)}
+              handler={(e) => updateFilters(e.target.value, e.target.name)}
               max="15"
               name="distanceCoworking"
-              inputValue={filterValues.distanceCoworking}
+              inputValue={filterState.distanceCoworking}
             />
             <p className="measureFilters">km</p>
           </div>
