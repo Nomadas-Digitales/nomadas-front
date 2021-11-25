@@ -17,7 +17,7 @@ const Valencia = () => {
   console.log(result);
   if (result) {
     return (
-      <div>
+      <div class="wrap">
         <Header>
           <Nav>
             <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
