@@ -73,4 +73,18 @@
   font-family: CirceRoundedRegular;
   font-size: 0.875;
   margin-left: 1.25rem;
+  color: $nomadas-green;
+  margin: 0;
+}
+
+.errorImgFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.errorImg {
+  width: 9.75rem;
+  margin-bottom: 1rem;
 }

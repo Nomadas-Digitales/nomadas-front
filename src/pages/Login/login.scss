@@ -1,0 +1,102 @@
+@import "../../style/base";
+.loginPage {
+}
+.loginPageImg {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.loginTitle {
+  font-family: CirceRoundedBold;
+  font-size: 1.5rem;
+  color: $nomadas-green;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  .passwordLabel,
+  .passForgotten {
+    margin-top: 1rem;
+  }
+}
+.passForgotten,
+.passwordLabel,
+.emailLabel {
+  font-family: CirceRoundedRegular;
+  font-size: 0.75rem;
+}
+
+.inputSpace {
+  width: 17.5rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 1rem;
+  border-width: 1px;
+  border-color: $nomadas-green;
+}
+
+.loginSubmitButton {
+  background-color: $nomadas-green;
+  height: 2.5rem;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  border-width: 0;
+  border-color: transparent;
+  margin-left: 3.2rem;
+  margin-top: 2rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.oauthButton1,
+.oauthButton2 {
+  border: 1px solid $nomadas-green;
+  height: 2.5rem;
+  width: 12rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  p {
+    font-family: CirceRoundedRegular;
+    font-size: 0.875rem;
+    color: $nomadas-green;
+  }
+}
+
+.oauthButton1 {
+  p {
+    margin-right: 1rem;
+  }
+}
+
+.oauthButtons {
+  display: flex;
+  height: 6rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5.75rem;
+}
+
+.line {
+  margin-top: 3.438rem;
+  margin-bottom: 5.75rem;
+}

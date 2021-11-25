@@ -8,6 +8,7 @@ import Nav from "Components/Nav";
 import Searcher from "Components/Searcher";
 import "./houses.scss";
 import context from "store/context";
+import errorImg from "static/Imagen error.png";
 
 const Houses = () => {
   const { filterValues } = useContext(context);
@@ -52,7 +53,17 @@ const Houses = () => {
           })}
         </section>
       ) : (
-        <p className="notFoundMessage">No se han encontrado resultados</p>
+        <div>
+          <div className="errorImgFrame">
+            <img src={errorImg} className="errorImg" />
+            <p className="notFoundMessage">¡Ups!</p>
+            <p className="notFoundMessage">No se han encontrado resultados.</p>
+            <p className="notFoundMessage">
+              Modifique los criterios de búsqueda.
+            </p>
+          </div>
+          <div></div>
+        </div>
       )}
     </div>
   );

@@ -215,7 +215,7 @@ const Detail = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="similarHousesFrame">
         <h2>Viviendas similares</h2>
         {similars !== undefined ? (
           <section className="catalogueContainer">
@@ -241,7 +241,7 @@ const Detail = () => {
           <span className="icon-TipoMapaBlanco"></span>
         </div>
         <div className="footerContantContainer">
-          <span className="icon-TipoMapaBlanco"></span>
+          <span className="icon-TipoTelefono"></span>
           <p className="contact">Contactar</p>
         </div>
       </div>
