@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./home.scss";
 import logo from "../../static/LOGO/PNG/WorkAbroad-13.png";
 import textLogo from "../../static/LOGO/PNG/WorkAbroad-12.png";
-import fondo from "../../static/Fondo.png";
+import fondo from "../../static/fondo-home.png";
 
 const Home = () => {
   return (
