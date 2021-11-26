@@ -23,7 +23,7 @@ const Detail = () => {
   const distanceBeachKm = Math.round(house.distancebeach / 1000);
 
   return (
-    <div>
+    <div className="detailPage">
       <div className="detailHeader">
         <img src={house.thumbnail} className="principalImg" />
         <Nav>
@@ -77,7 +77,7 @@ const Detail = () => {
         </div>
       </div>
       <div className="detailPageDescription">
-        <h2>Descripción</h2>
+        <h2 className="detailPageSectionTitle">Descripción</h2>
         <p>Piso para corta estancia. </p>
         <p>
           Este reformado piso a estrenar de {house.size}m2, está disponible para
@@ -95,7 +95,7 @@ const Detail = () => {
         <p>Llámenos para verla, estaremos encantados de atenderle.</p>
       </div>
       <div>
-        <h2>¿Qué hay en esa vivienda?</h2>
+        <h2 className="detailPageSectionTitle">¿Qué hay en esa vivienda?</h2>
         <div className="extraInfo">
           <div className="detailCityLeft">
             <div className="detail">
@@ -186,7 +186,7 @@ const Detail = () => {
         </div>
       </div>
       <div>
-        <h2>Galería</h2>
+        <h2 className="detailPageSectionTitle">Galería</h2>
         <div className="imgGaleryWraper">
           <div className="galeryLine">
             <div className="imgGalery">
@@ -216,7 +216,7 @@ const Detail = () => {
         </div>
       </div>
       <div className="similarHousesFrame">
-        <h2>Viviendas similares</h2>
+        <h2 className="detailPageSectionTitle">Viviendas similares</h2>
         {similars !== undefined ? (
           <section className="catalogueContainer">
             {similars

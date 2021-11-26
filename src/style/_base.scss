@@ -43,6 +43,13 @@ a {
   padding: 0;
 }
 
+@mixin detailPageTitles {
+  font-family: CirceRoundedBold;
+  color: $nomadas-green;
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+}
+
 %link {
   text-decoration: none;
   color: black;

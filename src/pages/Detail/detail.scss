@@ -19,9 +19,14 @@
 }
 
 .detailPageTitle {
-  font-family: CirceRoundedBold;
+  @include detailPageTitles;
   font-size: 2.25rem;
   margin-bottom: 0.7rem;
+}
+
+.detailPageSectionTitle {
+  @include detailPageTitles;
+  font-size: 1.5rem;
 }
 
 .extraInfo {
@@ -103,6 +108,10 @@
 .icon-TipoCorazonAzul,
 .icon-TipoTelefono {
   font-size: 2rem;
+}
+
+.icon-TipoCorazonAzul {
+  margin-left: 1rem;
 }
 
 .icon-TipoMapaBlanco {
