@@ -14,7 +14,7 @@ const Houses = () => {
   const { filterValues } = useContext(context);
   const history = useHistory();
 
-  const houses = useFetchFilteredHouses(filterValues);
+  const { houses, loading } = useFetchFilteredHouses(filterValues);
 
   const isFilterEmpty = Object.keys(filterValues).length === 0;
 
@@ -52,6 +52,8 @@ const Houses = () => {
             return <HouseCard key={i} {...house} />;
           })}
         </section>
+      ) : loading ? (
+        "Loading..."
       ) : (
         <div>
           <div className="errorImgFrame">
