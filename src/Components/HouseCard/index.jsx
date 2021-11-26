@@ -1,5 +1,5 @@
 import "./houseCard.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const HouseCard = ({
   address,
@@ -11,12 +11,11 @@ const HouseCard = ({
   thumbnail,
   propertycode,
 }) => {
+  const location = useLocation();
   return (
     <div className="homeContainer">
       <div className="homeImg">
-        <Link
-          to={`/cities/valencia/houses/detail?propertycode=${propertycode}`}
-        >
+        <Link to={`/cities/valencia/houses/detail/${propertycode}`}>
           <img className="img" src={thumbnail} />
         </Link>
       </div>
@@ -24,12 +23,15 @@ const HouseCard = ({
         <div className="titleContainer">
           <Link
             className="title"
-            to={`/cities/valencia/houses/detail?propertycode=${propertycode}`}
+            to={`/cities/valencia/houses/detail/${propertycode}`}
           >
             {address}
           </Link>
           <Link
-            to="/cities/valencia/houses/favorite"
+            to={{
+              pathname: "/cities/valencia/houses/favorite",
+              state: { prevPath: location.pathname },
+            }}
             className="icon-TipoCorazon"
           ></Link>
         </div>

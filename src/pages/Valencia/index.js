@@ -1,6 +1,6 @@
 import "./valencia.scss";
 
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 import Header from "Components/Header";
 import Nav from "Components/Nav";
@@ -10,6 +10,7 @@ import userFetchAllHouse from "../../hooks/userFetchAllHouses";
 
 const Valencia = () => {
   const history = useHistory();
+  const location = useLocation();
 
   const id = 1;
   const { result } = userFetchAllHouse(id);
@@ -40,14 +41,14 @@ const Valencia = () => {
               return (
                 <div className="houseDetail">
                   <Link
-                    to={`/cities/valencia/houses/detail?propertycode=${house.propertycode}`}
+                    to={`/cities/valencia/houses/detail/${house.propertycode}`}
                   >
                     <img src={house.thumbnail} alt={house.address} />
                   </Link>
                   <div className="houseDetailDescription">
                     <div className="houseDetailText">
                       <Link
-                        to={`/cities/valencia/houses/detail?propertycode=${house.propertycode}`}
+                        to={`/cities/valencia/houses/detail/${house.propertycode}`}
                       >
                         <h3>{house.address}</h3>
                       </Link>
@@ -59,7 +60,13 @@ const Valencia = () => {
                       </div>
                     </div>
                     <div className="houseDetailIcon">
-                      <span className="icon-TipoCorazon"></span>
+                      <Link
+                        className="icon-TipoCorazon"
+                        to={{
+                          pathname: "/cities/valencia/houses/favorite",
+                          state: { prevPath: location.pathname },
+                        }}
+                      ></Link>
                     </div>
                   </div>
                 </div>
@@ -88,7 +95,7 @@ const Valencia = () => {
                       </div>
                     </div>
                     <div className="houseDetailIcon">
-                      <span className="icon-TipoCorazon"></span>
+                      <span className="icon-TipoCorazon falseClick"></span>
                     </div>
                   </div>
                 </div>

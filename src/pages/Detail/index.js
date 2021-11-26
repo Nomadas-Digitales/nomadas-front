@@ -1,4 +1,4 @@
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation, useParams } from "react-router-dom";
 
 import Nav from "Components/Nav";
 import HouseCard from "Components/HouseCard";
@@ -12,12 +12,12 @@ import img6 from "../../static/6.jpg";
 import "./detail.scss";
 
 const Detail = () => {
-  const url = new URLSearchParams(window.location.search);
-  const propertycode = url.get("propertycode");
+  const { propertycode } = useParams();
 
   const { house, similars } = useFetchOneHouse(propertycode);
 
   const history = useHistory();
+  const location = useLocation();
 
   const distanceKm = Math.round(house.distance / 1000);
   const distanceBeachKm = Math.round(house.distancebeach / 1000);
@@ -233,7 +233,12 @@ const Detail = () => {
       </div>
       <div className="footer">
         <div className="footerIconContainer">
-          <Link to="/cities/valencia/houses/favorite">
+          <Link
+            to={{
+              pathname: "/cities/valencia/houses/favorite",
+              state: { prevPath: location.pathname },
+            }}
+          >
             <span className="icon-TipoCorazonAzul"></span>
           </Link>
         </div>

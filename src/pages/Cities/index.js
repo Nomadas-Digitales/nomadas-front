@@ -8,13 +8,14 @@ import imgMallorca from "../../static/Mallorca.jpg";
 import imgGranada from "../../static/GRANADA.jpg";
 import imgValencia from "../../static/FONDO-VALENCIA.jpg";
 
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 // import ComboBox from "../../Components/ComboBox";
 import Nav from "Components/Nav";
 import Searcher from "Components/Searcher";
 
 const Cities = () => {
   const history = useHistory();
+  const location = useLocation();
 
   return (
     <section>
@@ -40,7 +41,12 @@ const Cities = () => {
               <Link to="/cities/valencia">
                 <h2>VALENCIA</h2>
               </Link>
-              <Link to="/cities/valencia/houses/favorite">
+              <Link
+                to={{
+                  pathname: "/cities/valencia/houses/favorite",
+                  state: { prevPath: location.pathname },
+                }}
+              >
                 <span className="icon-TipoCorazon"></span>
               </Link>
             </div>

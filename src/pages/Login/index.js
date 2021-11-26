@@ -8,20 +8,31 @@ import context from "store/context";
 
 import fondo from "../../static/Fondo-Inicio-Sesion.png";
 
-const Login = () => {
+const Login = (props) => {
   const { login } = useContext(context);
-  const [loginResult, setLoginResult] = useState(false);
+  const [loginError, setLoginError] = useState(false);
 
   const history = useHistory();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const redirect = (path) => {
+    path = path || "/home";
+    history.push(path);
+  };
+
   const onSubmit = async (data) => {
     const result = await login(data);
-    setLoginResult(result);
+    if (result.success) {
+      const state = props.location.state || {};
+      redirect(state.prevPath);
+    } else {
+      setLoginError(true);
+    }
   };
 
   return (
@@ -32,6 +43,7 @@ const Login = () => {
         <p className="loginTitle">Accede a tu cuenta</p>
         <span className="icon-TipoMenuHamb falseClick"></span>
       </Nav>
+
       <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
         <label className="emailLabel">Email</label>
         <input
@@ -49,6 +61,13 @@ const Login = () => {
           type="password"
           {...register("password", { required: true })}
         />
+        {loginError ? (
+          <div className="loginErrorMessage">
+            Email o contraseña incorrectos.
+          </div>
+        ) : (
+          ""
+        )}
         <p className="passForgotten">¿Has olvidado contraseña?</p>
         <input
           className="loginSubmitButton"
