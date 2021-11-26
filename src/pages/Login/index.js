@@ -75,7 +75,12 @@ const Login = (props) => {
           value="Iniciar sesión"
         />
       </form>
-      <div className="line">o</div>
+      <div className="separationLine">
+        <span class="line-1"></span>
+        <span className="line">o</span>
+        <span class="line-1"></span>
+      </div>
+
       <div className="oauthButtons">
         <div className="oauthButton1">
           <span className="icon-TipoGoogle"></span>

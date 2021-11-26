@@ -43,8 +43,11 @@
   border-radius: 1rem;
   border-width: 1px;
   border-color: $nomadas-green;
+  padding-left: 1rem;
 }
-
+.inputSpace:focus {
+  outline: none;
+}
 .loginSubmitButton {
   background-color: $nomadas-green;
   height: 2.5rem;
@@ -93,7 +96,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5.75rem;
 }
 
 .line {
@@ -103,4 +105,22 @@
 
 .loginErrorMessage {
   color: red;
+  font-family: CirceRoundedRegular;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+
+.line-1 {
+  height: 1px;
+  background: black;
+  width: 10rem;
+  margin-bottom: 2.2rem;
+}
+
+.separationLine {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
