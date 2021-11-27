@@ -9,10 +9,7 @@ const InterFavorites = (props) => {
   const history = useHistory();
 
   return (
-    <section className="wrapper">
-    
-        <img className="imgFondoFav" src={imgFavoritos} alt="" />
-      
+    <section className="wrapper">     
       <Nav>
         <a
           aria-label="Volver a la página anterior"

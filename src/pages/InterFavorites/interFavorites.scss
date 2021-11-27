@@ -3,15 +3,24 @@
 @import "../../style/icons";
 
 .wrapper {
-  // position: relative;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6)
+  ),
+  url("../../static/Fondo-Favoritos.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 72%;
+  height: 100vh;
 }
 
 .contentFav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1.5rem;
+  row-gap: 1rem;
   position: relative;
+  height: auto;
 }
 
 .header1 {
@@ -21,7 +30,7 @@
   letter-spacing: -0.022em;
   color: #1a535c;
   padding-left: 2.5rem;
-  padding-bottom: 8.5rem;
+  padding-bottom: 5.8rem;
   z-index: 2;
   opacity: 1;
 }
@@ -40,20 +49,11 @@
   letter-spacing: -0.022em;
   color: #ffffff;
   padding-top: 0.5rem;
-  // z-index: 2;
-  // opacity: 1;
 }
 
 .linkWhite {
   color: #1a535c;
   background: #ffffff;
-}
-
-.imgFondoFav {
-  // position: absolute;
-  // left: -28rem;
-  // top: 0rem;
-  // opacity: 0.3;
 }
 
 .imgFondoFav{
