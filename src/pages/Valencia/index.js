@@ -14,11 +14,10 @@ const Valencia = () => {
 
   const id = 1;
   const { result } = userFetchAllHouse(id);
-  // const houses = userFetchAllHouse(id);
   console.log(result);
   if (result) {
     return (
-      <div class="wrap">
+      <div class="wrapCity">
         <Header>
           <Nav>
             <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
@@ -95,7 +94,13 @@ const Valencia = () => {
                       </div>
                     </div>
                     <div className="houseDetailIcon">
-                      <span className="icon-TipoCorazon falseClick"></span>
+                      <Link
+                        className="icon-TipoCorazon"
+                        to={{
+                          pathname: "/cities/valencia/houses/favorite",
+                          state: { prevPath: location.pathname },
+                        }}
+                      ></Link>
                     </div>
                   </div>
                 </div>

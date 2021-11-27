@@ -19,7 +19,6 @@
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
-  position: relative;
   height: auto;
 }
 
@@ -31,8 +30,6 @@
   color: #1a535c;
   padding-left: 2.5rem;
   padding-bottom: 5.8rem;
-  z-index: 2;
-  opacity: 1;
 }
 
 .linkGreen {
@@ -56,12 +53,3 @@
   background: #ffffff;
 }
 
-.imgFondoFav{
-  width: auto;
-  height: auto;
-  position: absolute;
-  left: -28rem;
-  top: 0rem;
-  opacity: 0.3;
-  z-index: -1;
-}
