@@ -1,18 +1,3 @@
-// import { Link } from "react-router-dom";
-
-// const InterFavorites = (props) => {
-//   return (
-//     <h1>
-//       InterFavorites
-//       <Link
-//         to={{
-//           pathname: "/login",
-//           state: { prevPath: props.location.state.prevPath },
-//         }}
-//       >
-//         login
-//       </Link>
-//     </h1>
 import "./interFavorites.scss";
 import imgFavoritos from "../../static/Fondo-Favoritos.jpg";
 
@@ -25,6 +10,9 @@ const InterFavorites = (props) => {
 
   return (
     <section className="wrapper">
+    
+        <img className="imgFondoFav" src={imgFavoritos} alt="" />
+      
       <Nav>
         <a
           aria-label="Volver a la página anterior"
@@ -41,13 +29,11 @@ const InterFavorites = (props) => {
         }} className="linkGreen">
           Iniciar sesión
         </Link>
-        <Link to="#" className="linkGreen linkWhite">
+        <Link to="/home" className="linkGreen linkWhite">
           Registrate
         </Link>
       </div>
-      <div className="imgFondoFav">
-        <img src={imgFavoritos} alt="" />
-      </div>
+      
     </section>
   );
 };

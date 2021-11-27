@@ -3,7 +3,7 @@
 @import "../../style/icons";
 
 .wrapper {
-  position: relative;
+  // position: relative;
 }
 
 .contentFav {
@@ -40,8 +40,8 @@
   letter-spacing: -0.022em;
   color: #ffffff;
   padding-top: 0.5rem;
-  z-index: 2;
-  opacity: 1;
+  // z-index: 2;
+  // opacity: 1;
 }
 
 .linkWhite {
@@ -50,13 +50,18 @@
 }
 
 .imgFondoFav {
+  // position: absolute;
+  // left: -28rem;
+  // top: 0rem;
+  // opacity: 0.3;
+}
+
+.imgFondoFav{
+  width: auto;
+  height: auto;
   position: absolute;
   left: -28rem;
   top: 0rem;
   opacity: 0.3;
-}
-
-.imgFondoFav img {
-  width: auto;
-  height: auto;
+  z-index: -1;
 }
