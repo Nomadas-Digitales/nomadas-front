@@ -1,0 +1,62 @@
+@import "../../style/base";
+@import "../../style/text";
+@import "../../style/icons";
+
+.wrapper {
+  position: relative;
+}
+
+.contentFav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  position: relative;
+}
+
+.header1 {
+  font-family: CirceRoundedBold;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: -0.022em;
+  color: #1a535c;
+  padding-left: 2.5rem;
+  padding-bottom: 8.5rem;
+  z-index: 2;
+  opacity: 1;
+}
+
+.linkGreen {
+  background: #1a535c;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 1px solid #1a535c;
+  width: 12rem;
+  height: 2.5rem;
+  font-family: CirceRoundedRegular;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  letter-spacing: -0.022em;
+  color: #ffffff;
+  padding-top: 0.5rem;
+  z-index: 2;
+  opacity: 1;
+}
+
+.linkWhite {
+  color: #1a535c;
+  background: #ffffff;
+}
+
+.imgFondoFav {
+  position: absolute;
+  left: -28rem;
+  top: 0rem;
+  opacity: 0.3;
+}
+
+.imgFondoFav img {
+  width: auto;
+  height: auto;
+}
