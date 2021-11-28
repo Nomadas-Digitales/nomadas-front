@@ -13,15 +13,20 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 import Nav from "Components/Nav";
 import Searcher from "Components/Searcher";
 
-const Cities = () => {
+const Cities = (props) => {
   const history = useHistory();
   const location = useLocation();
+
+  const goBackUrl = () => {
+    const locationState = props.location.state;
+    return locationState ? locationState.goBackPath : "/home";
+  };
 
   return (
     <section>
       <header className="headerCities">
         <Nav>
-          <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
+          <Link className="icon-TipoFlechaAtras" to={goBackUrl()} />
           <Searcher />
           <span className="icon-TipoMenuHamb falseClick"></span>
         </Nav>

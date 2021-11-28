@@ -10,18 +10,22 @@ import "./houses.scss";
 import context from "store/context";
 import errorImg from "static/Imagen error.png";
 
-const Houses = () => {
+const Houses = (props) => {
   const { filterValues } = useContext(context);
   const history = useHistory();
 
   const { houses, loading } = useFetchFilteredHouses(filterValues);
   const isFilterEmpty = Object.keys(filterValues).length === 0;
 
+  const goBackUrl = () => {
+    const locationState = props.location.state;
+    return locationState ? locationState.goBackPath : "/cities/valencia";
+  };
   return (
     <div>
       <Header>
         <Nav>
-          <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
+          <Link className="icon-TipoFlechaAtras" to={goBackUrl()} />
           <Searcher />
           <span className="icon-TipoMenuHamb falseClick"></span>
         </Nav>

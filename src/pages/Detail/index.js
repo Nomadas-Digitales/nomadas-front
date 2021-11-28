@@ -21,7 +21,7 @@ const Detail = (props) => {
 
   const goBackUrl = () => {
     const locationState = props.location.state;
-    return locationState ? locationState.goBackPath : "/home";
+    return locationState ? locationState.goBackPath : "/cities/valencia/houses";
   };
 
   return (

@@ -8,19 +8,24 @@ import Searcher from "Components/Searcher";
 import CityDetail from "Components/CityDetail";
 import userFetchAllHouse from "../../hooks/userFetchAllHouses";
 
-const Valencia = () => {
+const Valencia = (props) => {
   const history = useHistory();
   const location = useLocation();
 
   const id = 1;
   const { result } = userFetchAllHouse(id);
-  console.log(result);
+
+  const goBackUrl = () => {
+    const locationState = props.location.state;
+    return locationState ? locationState.goBackPath : "/cities";
+  };
+
   if (result) {
     return (
       <div class="wrapCity">
         <Header>
           <Nav>
-            <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
+            <Link className="icon-TipoFlechaAtras" to={goBackUrl()} />
             <Searcher />
             <span className="icon-TipoMenuHamb falseClick"></span>
           </Nav>
