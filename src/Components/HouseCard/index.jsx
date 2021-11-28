@@ -16,7 +16,14 @@ const HouseCard = ({
   return (
     <div className="homeContainer">
       <div className="homeImg">
-        <Link to={`/cities/valencia/houses/detail/${propertycode}`}>
+        <Link
+          to={{
+            pathname: `/cities/valencia/houses/detail/${propertycode}`,
+            state: {
+              goBackPath: location.pathname,
+            },
+          }}
+        >
           <img className="img" src={thumbnail} />
         </Link>
       </div>
@@ -24,7 +31,12 @@ const HouseCard = ({
         <div className="titleContainer">
           <Link
             className="title"
-            to={`/cities/valencia/houses/detail/${propertycode}`}
+            to={{
+              pathname: `/cities/valencia/houses/detail/${propertycode}`,
+              state: {
+                goBackPath: location.pathname,
+              },
+            }}
           >
             {address}
           </Link>

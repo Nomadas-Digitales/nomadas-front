@@ -1,4 +1,4 @@
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Nav from "Components/Nav";
 import HouseCard from "Components/HouseCard";
 import useFetchOneHouse from "hooks/useFetchOneHouse";
@@ -11,22 +11,25 @@ import img5 from "../../static/5.JPG";
 import img6 from "../../static/6.jpg";
 import "./detail.scss";
 
-const Detail = () => {
+const Detail = (props) => {
   const { propertycode } = useParams();
 
   const { house, similars } = useFetchOneHouse(propertycode);
 
-  const history = useHistory();
-
   const distanceKm = Math.round(house.distance / 1000);
   const distanceBeachKm = Math.round(house.distancebeach / 1000);
+
+  const goBackUrl = () => {
+    const locationState = props.location.state;
+    return locationState ? locationState.goBackPath : "/home";
+  };
 
   return (
     <div className="detailPage">
       <div className="detailHeader">
         <img src={house.thumbnail} className="principalImg" />
         <Nav>
-          <a className="icon-TipoFlechaAtras" onClick={history.goBack}></a>
+          <Link className="icon-TipoFlechaAtras" to={goBackUrl()} />
           <Link className="icon-TipoMenuHamb"></Link>
         </Nav>
       </div>
