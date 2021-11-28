@@ -1,7 +1,4 @@
 import { Link, useHistory, useParams } from "react-router-dom";
-import { useContext } from "react";
-
-import context from "store/context";
 import Nav from "Components/Nav";
 import HouseCard from "Components/HouseCard";
 import useFetchOneHouse from "hooks/useFetchOneHouse";
@@ -16,7 +13,6 @@ import "./detail.scss";
 
 const Detail = () => {
   const { propertycode } = useParams();
-  const { id } = useContext(context);
 
   const { house, similars } = useFetchOneHouse(propertycode);
 

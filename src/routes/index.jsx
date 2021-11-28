@@ -34,7 +34,7 @@ export default [
     exact: true,
   },
   {
-    path: "/cities/valencia/houses/detail/:propertycode",
+    path: "/cities/valencia/houses/detail/:propertycode(\\d+)",
     component: Detail,
     exact: true,
   },

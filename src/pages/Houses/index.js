@@ -15,7 +15,6 @@ const Houses = () => {
   const history = useHistory();
 
   const { houses, loading } = useFetchFilteredHouses(filterValues);
-
   const isFilterEmpty = Object.keys(filterValues).length === 0;
 
   return (

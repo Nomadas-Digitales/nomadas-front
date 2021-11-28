@@ -4,19 +4,27 @@ import { Link, useLocation } from "react-router-dom";
 import context from "store/context";
 
 const FavoriteHeart = ({ propertycode }) => {
-  const { updateFavorites, deleteFavorites, favorites } = useFavorites();
+  const { updateFavorites, deleteFavorites, readFavorites } = useFavorites();
   const location = useLocation();
   const { id } = useContext(context);
 
   const onClick = () => {
-    const isFavorite = favorites.includes(propertycode);
-    console.log("detail propertyCode", propertycode);
-    console.log("detail favorities", favorites);
+    const propertyCode = parseInt(propertycode);
+    const houses = readFavorites(id);
+    const isFavorite = houses.includes(propertyCode);
     if (isFavorite) {
-      deleteFavorites(propertycode, id);
+      deleteFavorites(propertyCode, id);
     } else {
-      updateFavorites(propertycode, id);
+      updateFavorites(propertyCode, id);
     }
+  };
+
+  const heartClassName = () => {
+    const propertyCode = parseInt(propertycode);
+    const houses = readFavorites(id);
+    return houses.includes(propertyCode)
+      ? "icon-TipoCorazon1"
+      : "icon-TipoCorazon";
   };
 
   return (
@@ -35,13 +43,7 @@ const FavoriteHeart = ({ propertycode }) => {
         </Link>
       ) : (
         <a onClick={onClick}>
-          <span
-            className={
-              favorites.includes(propertycode)
-                ? "icon-TipoCorazon1"
-                : "icon-TipoCorazon"
-            }
-          ></span>
+          <span className={heartClassName()}></span>
         </a>
       )}
     </div>

@@ -9,42 +9,31 @@ const useFavorites = () => {
   useEffect(() => {
     const jsonValue = fromLocalStorage(`user${id}`);
     const houses = jsonValue ? JSON.parse(jsonValue) : [];
-    setFavorites(() => [...houses]);
-    console.log("hook useEffect", {
-      id,
-      favorites,
-      houses,
-    });
+    setFavorites(() => houses);
   }, [id]);
 
   const updateFavorites = (propertycode, userId) => {
-    const jsonValue = fromLocalStorage(`user${userId}`);
-    const houses = jsonValue ? JSON.parse(jsonValue) : [];
+    propertycode = parseInt(propertycode);
+    const houses = readFavorites(userId);
     houses.push(propertycode);
     toLocalStorage(`user${userId}`, JSON.stringify(houses));
-    setFavorites((prevState) => [...prevState, propertycode]);
-    console.log("hook update", {
-      propertycode,
-      userId,
-      houses,
-    });
+    setFavorites(() => houses);
   };
 
   const deleteFavorites = (propertycode, userId) => {
-    const jsonValue = fromLocalStorage(`user${userId}`);
-    const houses = jsonValue ? JSON.parse(jsonValue) : [];
+    propertycode = parseInt(propertycode);
+    const houses = readFavorites(userId);
     const houseIndex = houses.indexOf(propertycode);
     houses.splice(houseIndex, 1);
     toLocalStorage(`user${userId}`, JSON.stringify(houses));
     setFavorites(() => houses);
-    console.log("hook delete", {
-      propertycode,
-      userId,
-      houses,
-      houseIndex,
-    });
   };
-  return { updateFavorites, deleteFavorites, favorites };
+
+  const readFavorites = (userId) => {
+    const jsonValue = fromLocalStorage(`user${userId}`);
+    return jsonValue ? JSON.parse(jsonValue) : [];
+  };
+  return { updateFavorites, deleteFavorites, readFavorites, favorites };
 };
 
 export default useFavorites;
