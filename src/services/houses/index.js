@@ -11,7 +11,7 @@ const getByFilters = ({ get }) => async (filters) => {
   });
 
   try {
-    return (await get(`/house?${queryFilters.join("&")}`)).data;
+    return (await get(`/house?${queryFilters.join("&")}&pageSize=200`)).data;
   } catch (error) {
     console.info("Cannot get products");
     return false;
