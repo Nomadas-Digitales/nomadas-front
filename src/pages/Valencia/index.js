@@ -6,6 +6,7 @@ import Header from "Components/Header";
 import Nav from "Components/Nav";
 import Searcher from "Components/Searcher";
 import CityDetail from "Components/CityDetail";
+import FavoriteHeart from "Components/FavHeart";
 import userFetchAllHouse from "../../hooks/userFetchAllHouses";
 
 const Valencia = (props) => {
@@ -64,13 +65,7 @@ const Valencia = (props) => {
                       </div>
                     </div>
                     <div className="houseDetailIcon">
-                      <Link
-                        className="icon-TipoCorazon"
-                        to={{
-                          pathname: "/cities/valencia/houses/favorite",
-                          state: { prevPath: location.pathname },
-                        }}
-                      ></Link>
+                      <FavoriteHeart propertycode={house.propertycode} />
                     </div>
                   </div>
                 </div>
@@ -99,13 +94,7 @@ const Valencia = (props) => {
                       </div>
                     </div>
                     <div className="houseDetailIcon">
-                      <Link
-                        className="icon-TipoCorazon"
-                        to={{
-                          pathname: "/cities/valencia/houses/favorite",
-                          state: { prevPath: location.pathname },
-                        }}
-                      ></Link>
+                      <a className="icon-TipoCorazon" />
                     </div>
                   </div>
                 </div>
