@@ -9,13 +9,12 @@ const Home = () => {
     <section>
        <div className="wrap">
         <section className="backGround">
-          <img className="logo" src={logo} />
-          <img className="textLogo" src={textLogo} />
+          <img className="logo" alt="Logotipo Nomadas digitales" src={logo} />
+          <img className="textLogo" alt="Work Abroad" src={textLogo} />
           <button className="buttonGreen">Iniciar sesión</button>
           <button className="buttonWhite">Registraste</button>
           <a href="/cities">Continuar como invitado {'>'}</a>
         </section>
-        <div class="imgFondo"><img src={fondo}/></div>
       </div>
     </section>
   );
