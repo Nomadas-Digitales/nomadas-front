@@ -1,8 +1,7 @@
-export const toLocalStorage = (token) => {
-  console.log("token");
-  localStorage.setItem("token", token);
+export const toLocalStorage = (name, value) => {
+  localStorage.setItem(name, value);
 };
 
-export const fromLocalStorage = () => {
-  return localStorage.getItem("token");
+export const fromLocalStorage = (name) => {
+  return localStorage.getItem(name);
 };

@@ -7,7 +7,10 @@ const InterFavorites = (props) => {
       <Link
         to={{
           pathname: "/login",
-          state: { prevPath: props.location.state.prevPath },
+          state: {
+            prevPath: props.location.state.prevPath,
+            propertycode: props.location.state.propertycode,
+          },
         }}
       >
         login

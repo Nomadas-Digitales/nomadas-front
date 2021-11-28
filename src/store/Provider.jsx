@@ -4,7 +4,8 @@ import { useAuth } from "hooks/useAuth";
 
 const Provider = (props) => {
   const { filterValues, updateFilterValues, deleteFilters } = useFilters();
-  const { userToken, login } = useAuth();
+  const { userToken, login, id } = useAuth();
+  console.log("context user id", id);
 
   return (
     <context.Provider
@@ -14,6 +15,7 @@ const Provider = (props) => {
         deleteFilters,
         userToken,
         login,
+        id,
       }}
     >
       {props.children}

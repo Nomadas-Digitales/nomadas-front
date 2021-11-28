@@ -105,12 +105,20 @@
   justify-content: center;
   align-items: center;
 }
-.icon-TipoCorazonAzul,
+.icon-TipoCorazon,
+.icon-TipoCorazon1,
 .icon-TipoTelefono {
   font-size: 2rem;
 }
 
-.icon-TipoCorazonAzul {
+.footerIconContainer {
+  .icon-TipoCorazon {
+    color: white;
+  }
+}
+
+.icon-TipoCorazon,
+.icon-TipoCorazon1 {
   margin-left: 1rem;
 }
 

@@ -1,5 +1,6 @@
 import "./houseCard.scss";
 import { Link, useLocation } from "react-router-dom";
+import FavoriteHeart from "Components/FavHeart";
 
 const HouseCard = ({
   address,
@@ -27,13 +28,7 @@ const HouseCard = ({
           >
             {address}
           </Link>
-          <Link
-            to={{
-              pathname: "/cities/valencia/houses/favorite",
-              state: { prevPath: location.pathname },
-            }}
-            className="icon-TipoCorazon"
-          ></Link>
+          <FavoriteHeart propertycode={propertycode} />
         </div>
 
         <div className="description">

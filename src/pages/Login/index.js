@@ -1,11 +1,12 @@
-import Nav from "Components/Nav";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { useContext, useState } from "react";
 
-import "./login.scss";
+import Nav from "Components/Nav";
 import context from "store/context";
+import useFavorites from "hooks/useFavorites";
 
+import "./login.scss";
 import fondo from "../../static/Fondo-Inicio-Sesion.png";
 
 const Login = (props) => {
@@ -20,6 +21,8 @@ const Login = (props) => {
     formState: { errors },
   } = useForm();
 
+  const { updateFavorites } = useFavorites();
+
   const redirect = (path) => {
     path = path || "/home";
     history.push(path);
@@ -30,6 +33,9 @@ const Login = (props) => {
     if (result.success) {
       const state = props.location.state || {};
       redirect(state.prevPath);
+      if (state.propertycode) {
+        updateFavorites(state.propertycode, result.data.id);
+      }
     } else {
       setLoginError(true);
     }
