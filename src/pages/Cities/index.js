@@ -8,13 +8,12 @@ import imgMallorca from "../../static/Mallorca.jpg";
 import imgGranada from "../../static/GRANADA.jpg";
 import imgValencia from "../../static/FONDO-VALENCIA.jpg";
 
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import ComboBox from "../../Components/ComboBox";
 import Nav from "Components/Nav";
 import Searcher from "Components/Searcher";
 
 const Cities = (props) => {
-  const history = useHistory();
   const location = useLocation();
 
   const goBackUrl = () => {
@@ -46,14 +45,9 @@ const Cities = (props) => {
               <Link to="/cities/valencia">
                 <h2>VALENCIA</h2>
               </Link>
-              <Link
-                to={{
-                  pathname: "/cities/valencia/houses/favorite",
-                  state: { prevPath: location.pathname },
-                }}
-              >
+              <a>
                 <span className="icon-TipoCorazon"></span>
-              </Link>
+              </a>
             </div>
             <p>2.563 Vivienda</p>
             <p>2.186€/mes</p>
@@ -72,18 +66,18 @@ const Cities = (props) => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <Link to="/cities/valencia">
+            <a>
               <img src={imgGranada} alt="Fotografía de Granada" />
-            </Link>
+            </a>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <Link to="/cities/valencia">
+              <a>
                 <h2>GRANADA</h2>
-              </Link>
-              <Link to="/cities/valencia/houses/favorite">
+              </a>
+              <a>
                 <span className="icon-TipoCorazon"></span>
-              </Link>
+              </a>
             </div>
             <p>1.635 Vivienda</p>
             <p>2.317€/mes</p>
@@ -102,18 +96,18 @@ const Cities = (props) => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <span className="falseClick">
+            <a>
               <img src={imgMalaga} alt="Fotografía de Málaga" />
-            </span>
+            </a>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <span className="falseClick">
+              <a>
                 <h2>MÁLAGA</h2>
-              </span>
-              <Link to="/cities/valencia/houses/favorite">
+              </a>
+              <a>
                 <span className="icon-TipoCorazon"></span>
-              </Link>
+              </a>
             </div>
             <p>1.635 Vivienda</p>
             <p>2.318€/mes</p>
@@ -132,18 +126,18 @@ const Cities = (props) => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <span className="falseClick">
+            <a>
               <img src={imgMadrid} alt="Fotografía de Madrid" />
-            </span>
+            </a>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <span className="falseClick">
+              <a>
                 <h2>MADRID</h2>
-              </span>
-              <Link to="/cities/valencia/houses/favorite">
+              </a>
+              <a>
                 <span className="icon-TipoCorazon"></span>
-              </Link>
+              </a>
             </div>
             <p>12.937 Vivienda</p>
             <p>2.591€/mes</p>
@@ -162,18 +156,18 @@ const Cities = (props) => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <span className="falseClick">
+            <a>
               <img src={imgMallorca} alt="Fotografía de Mallorca" />
-            </span>
+            </a>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <span className="falseClick">
+              <a>
                 <h2>MALLORCA</h2>
-              </span>
-              <Link to="/cities/valencia/houses/favorite">
+              </a>
+              <a>
                 <span className="icon-TipoCorazon"></span>
-              </Link>
+              </a>
             </div>
             <p>1.874 Vivienda</p>
             <p>3.295€/mes</p>
@@ -192,18 +186,18 @@ const Cities = (props) => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <span className="falseClick">
+            <a>
               <img src={imgBarcelona} alt="foto" />
-            </span>
+            </a>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <span className="falseClick">
+              <a>
                 <h2>BARCELONA</h2>
-              </span>
-              <Link to="/cities/valencia/houses/favorite">
+              </a>
+              <a>
                 <span className="icon-TipoCorazon"></span>
-              </Link>
+              </a>
             </div>
             <p>6.591 Vivienda</p>
             <p>2.680€/mes</p>
@@ -228,12 +222,12 @@ const Cities = (props) => {
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <span className="falseClick">
+              <a>
                 <h2>CÁDIZ</h2>
-              </span>
-              <Link to="/cities/valencia/houses/favorite">
+              </a>
+              <a>
                 <span className="icon-TipoCorazon"></span>
-              </Link>
+              </a>
             </div>
             <p>1.245 Vivienda</p>
             <p>2.184€/mes</p>
@@ -252,18 +246,18 @@ const Cities = (props) => {
 
         <section class="sectionCity">
           <div className="contentImg">
-            <span className="falseClick">
+            <a>
               <img src={imgAsturias} alt="foto" />
-            </span>
+            </a>
           </div>
           <div class="contentText">
             <div class="contentTextHeader">
-              <span className="falseClick">
+              <a>
                 <h2>OVIEDO</h2>
-              </span>
-              <Link to="/cities/valencia/houses/favorite">
+              </a>
+              <a>
                 <span className="icon-TipoCorazon"></span>
-              </Link>
+              </a>
             </div>
             <p>1.245 Vivienda</p>
             <p>2.184€/mes</p>

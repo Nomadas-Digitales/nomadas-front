@@ -32,7 +32,7 @@ const Valencia = (props) => {
           </Nav>
         </Header>
         <div className="houseRoomContainer">
-          <Link className="housesLink falseClick" to="/cities/valencia/houses">
+          <Link className="housesLink" to="/cities/valencia/houses">
             Viviendas
           </Link>
 
