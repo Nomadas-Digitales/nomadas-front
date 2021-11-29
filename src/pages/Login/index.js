@@ -24,7 +24,7 @@ const Login = (props) => {
   const { updateFavorites } = useFavorites();
 
   const redirect = (path) => {
-    path = path || "/home";
+    path = path || "/cities";
     history.push(path);
   };
 
