@@ -173,27 +173,27 @@ const Filters = () => {
           <p className="filterTitles">Tipo de vivienda</p>
           <label className="houseTypeContainer">
             Piso
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Casa/Chalet
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Duplex
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Ático
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Estudio
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
         </div>
@@ -202,17 +202,17 @@ const Filters = () => {
           <p className="filterTitles">Estado</p>
           <label className="houseTypeContainer">
             Buen estado
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Reformado
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Obra nueva
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
         </div>
@@ -220,22 +220,22 @@ const Filters = () => {
           <p className="filterTitles">Adicional</p>
           <label className="houseTypeContainer">
             Ascensor
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Plaza de garaje
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Piscina/Terraza
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Aire acondicionado
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
         </div>
@@ -255,12 +255,12 @@ const Filters = () => {
           <p className="filterTitles">Tipo de conexión</p>
           <label className="houseTypeContainer">
             Wifi
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Cable
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
         </div>
@@ -280,22 +280,22 @@ const Filters = () => {
           <p className="filterTitles">Orientación</p>
           <label className="houseTypeContainer">
             Norte
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Sur
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Este
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
           <label className="houseTypeContainer">
             Oeste
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
         </div>

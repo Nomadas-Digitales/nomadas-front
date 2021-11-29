@@ -181,6 +181,32 @@ div.select__input-container {
   border-radius: 0.3rem;
 }
 
+.houseTypeContainer input:checked ~ .checkmark {
+  background-color: $nomadas-green;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.houseTypeContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.houseTypeContainer .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .distanceCoworkingFP {
   margin-bottom: 4rem;
 }
