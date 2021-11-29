@@ -2,60 +2,58 @@
 @import "../../style/text";
 @import "../../style/icons";
 
-.wrap{
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.6),
-        rgba(255, 255, 255, 0.6)
-      ),
-      url("../../static/fondo-home.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 72%;
-      height: 100vh;
+.wrap {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("../../static/fondo-home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 72%;
+  height: 100vh;
 }
 
-.backGround{
-    padding-top: 10.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 1.5rem;
-    .logo{
-        padding-top: 6.8rem;
-        width: 4.875rem;
-        opacity: 1;
-        
-    }
-    .textLogo{
-        width: 14rem;
-        padding-bottom: 1.9rem;
-        
-    }
-    button{
-        background: #1A535C;
-        box-sizing: border-box;
-        border-radius: 20px;
-        border: 1px solid #1A535C;
-        width: 12rem;
-        height: 2.5rem;
-        font-family: CirceRoundedRegular;
-        font-size: 1rem;
-        line-height: 1.25rem;
-        text-align: center;
-        letter-spacing: -0.022em;
-        color: #FFFFFF;     
-        margin-bottom: -.5rem;   
-    }
-    .buttonWhite{
-        color: #1A535C;
-        background: #FFFFFF;
-    }
-    a{
+.backGround {
+  padding-top: 10.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  .logo {
+    padding-top: 6.8rem;
+    width: 4.875rem;
+    opacity: 1;
+  }
+  .textLogo {
+    width: 14rem;
+    padding-bottom: 1.9rem;
+  }
+  button {
+    background: #1a535c;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid #1a535c;
+    width: 12rem;
+    height: 2.5rem;
+    font-family: CirceRoundedRegular;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: center;
+    letter-spacing: -0.022em;
+    color: #ffffff;
+    margin-bottom: -0.5rem;
+  }
+  .buttonWhite {
+    color: #1a535c;
+    background: #ffffff;
+  }
+  a {
     font-family: CirceRoundedRegular;
     font-size: 1rem;
     line-height: 1.25rem;
     letter-spacing: -0.022em;
-    color: #1A535C;
+    color: #1a535c;
     margin-top: 1rem;
-    }
+  }
 }
