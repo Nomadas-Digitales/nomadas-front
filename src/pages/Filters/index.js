@@ -169,6 +169,76 @@ const Filters = () => {
             />
           </div>
         </div>
+        <div className="houseTypeFilter">
+          <p className="filterTitles">Tipo de vivienda</p>
+          <label className="houseTypeContainer">
+            Piso
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Casa/Chalet
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Duplex
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Ático
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Estudio
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+        </div>
+
+        <div className="houseTypeFilter">
+          <p className="filterTitles">Estado</p>
+          <label className="houseTypeContainer">
+            Buen estado
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Reformado
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Obra nueva
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+        </div>
+        <div className="houseTypeFilter">
+          <p className="filterTitles">Adicional</p>
+          <label className="houseTypeContainer">
+            Ascensor
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Plaza de garaje
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Piscina/Terraza
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Aire acondicionado
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+        </div>
         <div className="internetFP">
           <p className="filterTitles">Velocidad mínima de internet</p>
           <div className="slideAndMeasure">
@@ -180,6 +250,19 @@ const Filters = () => {
             />
             <p className="measureFilters">Mbps</p>
           </div>
+        </div>
+        <div className="houseTypeFilter">
+          <p className="filterTitles">Tipo de conexión</p>
+          <label className="houseTypeContainer">
+            Wifi
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Cable
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
         </div>
         <div className="distanceBeachFP">
           <p className="filterTitles">Distancia a la playa</p>
@@ -193,6 +276,29 @@ const Filters = () => {
             <p className="measureFilters">km</p>
           </div>
         </div>
+        <div className="houseTypeFilter">
+          <p className="filterTitles">Orientación</p>
+          <label className="houseTypeContainer">
+            Norte
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Sur
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Este
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+          <label className="houseTypeContainer">
+            Oeste
+            <input type="checkbox" checked="checked" />
+            <span className="checkmark"></span>
+          </label>
+        </div>
         <div className="distanceCoworkingFP">
           <p className="filterTitles">Distancia a Coworking</p>
           <div className="slideAndMeasure">
@@ -205,6 +311,7 @@ const Filters = () => {
             <p className="measureFilters">km</p>
           </div>
         </div>
+
         <div className="showResults">
           <Link to="/cities/valencia/houses" className="showResultsLink">
             Mostrar resultados
