@@ -85,7 +85,7 @@ const Valencia = (props) => {
                     className="falseClick"
                   />
                   <div className="houseDetailDescription">
-                    <div className="houseDetailText">
+                    <div className="houseDetailText valenciaHousesText">
                       <h3 className="falseClick">{house.address}</h3>
                       <p>{house.price}€/mes</p>
                       <div className="houseDetailTextIcon">
@@ -93,7 +93,7 @@ const Valencia = (props) => {
                         <span className="icon-Tipofavoritos"></span>
                       </div>
                     </div>
-                    <div className="houseDetailIcon">
+                    <div className="houseDetailIcon valenciaRoomsIcon">
                       <a className="icon-TipoCorazon" />
                     </div>
                   </div>

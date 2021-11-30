@@ -96,20 +96,25 @@
 }
 
 .houseDetailText {
-  width: 60%;
+  width: 55%;
 }
 
 .houseDetailIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  width: 1.5rem;
   a {
     font-size: 2rem;
     color: #ec704f;
   }
 }
-
+.valenciaRoomsIcon {
+  padding-right: 1rem;
+}
+.valenciaHousesText {
+  margin-left: 0.5rem;
+}
 .houseDetailTextIcon {
   display: flex;
   justify-content: flex-start;
