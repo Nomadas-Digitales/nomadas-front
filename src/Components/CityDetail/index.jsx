@@ -29,7 +29,7 @@ const CityDetail = () => {
             </div>
             <div>
               <p>Coste medio</p>
-              <p>2.138€/mes</p>
+              <p>2.186€/mes</p>
             </div>
           </div>
         </div>

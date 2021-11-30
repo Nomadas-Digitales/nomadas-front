@@ -29,7 +29,7 @@ const Cities = (props) => {
           <Searcher />
           <span className="icon-TipoMenuHamb falseClick"></span>
         </Nav>
-        <h1>¿AÚN NO TE HAS DECIDO?</h1>
+        <h1>¿AÚN NO TE HAS DECIDIDO?</h1>
         <button>¡Te aconsejamos!</button>
       </header>
 
