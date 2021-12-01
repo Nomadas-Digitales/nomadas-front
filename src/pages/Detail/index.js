@@ -53,7 +53,7 @@ const Detail = (props) => {
             </div>
             <div>
               <p>Distancia al </p>
-              <p>centro({distanceKm}km)</p>
+              <p>centro({distanceKm === 0 ? "0.5" : distanceKm}km)</p>
             </div>
           </div>
         </div>
