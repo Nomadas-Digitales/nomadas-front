@@ -247,6 +247,7 @@ const Filters = () => {
               max="800"
               name="internet"
               inputValue={filterState.internet}
+              step="50"
             />
             <p className="measureFilters">Mbps</p>
           </div>
