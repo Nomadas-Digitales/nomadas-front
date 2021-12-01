@@ -16,8 +16,8 @@ const Detail = (props) => {
 
   const { house, similars } = useFetchOneHouse(propertycode);
 
-  const distanceKm = Math.round(house.distance / 1000);
-  const distanceBeachKm = Math.round(house.distancebeach / 1000);
+  const distanceKm = (house.distance / 1000).toFixed(1);
+  const distanceBeachKm = (house.distancebeach / 1000).toFixed(1);
 
   const goBackUrl = () => {
     const locationState = props.location.state;
@@ -53,7 +53,10 @@ const Detail = (props) => {
             </div>
             <div>
               <p>Distancia al </p>
-              <p>centro({distanceKm === 0 ? "0.5" : distanceKm}km)</p>
+              <p>
+                centro(
+                {distanceKm % 1 === 0 ? Math.round(distanceKm) : distanceKm}km)
+              </p>
             </div>
           </div>
         </div>
@@ -64,7 +67,13 @@ const Detail = (props) => {
             </div>
             <div>
               <p>Distancia a la </p>
-              <p>playa({distanceBeachKm}km)</p>
+              <p>
+                playa(
+                {distanceBeachKm % 1 === 0
+                  ? Math.round(distanceBeachKm)
+                  : distanceBeachKm}
+                km)
+              </p>
             </div>
           </div>
           <div className="detail">
